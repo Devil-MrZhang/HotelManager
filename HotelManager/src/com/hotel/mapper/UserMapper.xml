@@ -6,7 +6,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	<!-- 根据用户ID查询用户信息 -->
 	<select id="findWithLoginnameAndPassword" parameterType="com.hotel.entity.User"  resultType="com.hotel.entity.User">
 		SELECT
-		* FROM tb_user WHERE loginname=#{loginname} and password=#{password}
+		* FROM t_user WHERE username=#{username} and password=#{password}
 	</select>
 
 	
