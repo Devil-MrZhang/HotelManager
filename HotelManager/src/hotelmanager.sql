@@ -26,6 +26,7 @@ CREATE TABLE `t_food` (
   `type` varchar(20) NOT NULL,
   `price` double NOT NULL,
   `describe` varchar(150) NOT NULL,
+  `img_url` varchar(200) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -56,6 +57,7 @@ CREATE TABLE `t_room` (
   `price` double NOT NULL,
   `bednumber` int(11) NOT NULL,
   `type` varchar(10) NOT NULL,
+  `img_url` varchar(200) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 

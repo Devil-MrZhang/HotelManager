@@ -8,7 +8,7 @@
 </head>
 <body>
 <%
-	response.sendRedirect("content/loginForm.jsp");
+	response.sendRedirect("admin/showRoomList");
 %>
 </body>
 </html>

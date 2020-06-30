@@ -21,6 +21,6 @@
    <!-- 视图解析器  p:prefix属性表示前缀  p:suffix 表示后缀  -->
      <bean id="viewResolver"
           class="org.springframework.web.servlet.view.InternalResourceViewResolver"
-          p:prefix="/content/" p:suffix=".jsp"/> 
+          p:prefix="/" p:suffix=".jsp"/> 
     
 </beans>
