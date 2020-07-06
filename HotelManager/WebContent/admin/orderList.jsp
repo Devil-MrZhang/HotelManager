@@ -144,10 +144,7 @@
 
                                     <td>
 
-                                        <div class="PublicTableBtnIcon Color3Btn Js_edit">
-                                            <i class="iconfont icon-tubiaozhizuomobanyihuifu-"></i>
-                                            <span>编辑</span>
-                                        </div>
+                                     
 
                                         <div class="PublicTableBtnIcon Color4Btn Js_delete">
                                             <i class="iconfont icon-shanchu"></i>
@@ -163,108 +160,7 @@
                         </table>
 
                     </div>
-                    <!--分页-->
-                    <div class="PageNumber">
-                        <div class="NumbersBox">
-                            <div class="LeftArrow">
-                                上一页
-                            </div>
-                            <ul>
-                                <li class="Select">1</li>
-                                <li class="">2</li>
-                                <li class="">...</li>
-                                <li class="">4</li>
-                                <li class="">5</li>
-                            </ul>
-                            <div class="RightArrow ">
-                                下一页
-                            </div>
-                        </div>
-                    </div>
 
-
-                </div>
-            </div>
-
-        </div>
-    </div>
-
-
-    <!-- alert通用 提示是否删除-->
-    <div class="PublicFloatBox f_delete">
-        <div class="f_MiddleBox wid260">
-            <div class="f_Head">
-                <span>提示消息</span>
-                <i class="Js_closeBtn iconfont icon-buoumaotubiao20 fr"></i>
-            </div>
-            <div class="f_content clearfix">
-                <!--提示消息内容-->
-                <div class="f_someText">
-                    <i class="iconfont icon-tishi"></i>
-                    <span>确定删除此信息？</span>
-                </div>
-                <!--按钮-->
-                <div class="f_pormatBtn  clearfix">
-                    <div class="f_pormatBtn1">
-                        确定
-                    </div>
-                    <div class="f_pormatBtn2">
-                        删除
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--添加用户浮层-->
-    <div class="PublicFloatBox adduser">
-        <div class="f_MiddleBox wid400">
-            <div class="f_Head">
-                <span>添加用户</span>
-                <i class="Js_closeBtn iconfont icon-buoumaotubiao20 fr"></i>
-            </div>
-            <div class="f_content">
-                <div class="f_alonediv">
-                    <div class="f_alone_name">
-                        ID:
-                    </div>
-                    <div class="f_alone_input">
-                        <input class="f_p_input" />
-                    </div>
-                    <!--提示消息-->
-                    <div class="f_pormat">
-                        请输入正确的ID
-                    </div>
-                </div>
-                <div class="f_alonediv">
-                    <div class="f_alone_name">
-                        手机号:
-                    </div>
-                    <div class="f_alone_input">
-                        <input class="f_p_input" />
-                    </div>
-                    <!--提示消息-->
-                    <div class="f_pormat">
-                        请输入正确的手机号
-                    </div>
-                </div>
-                <div class="f_alonediv1">
-                    <div class="f_alone_name">
-                    </div>
-                    <div class="f_alone_input1">
-                        <!--publicbtn-->
-                        <div class="publicf_btn">
-                            <div class="publicf_btn1">
-                                确定
-                            </div>
-                            <div class="publicf_btn2 fr Js_closeBtn">
-                                取消
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
+                    
 </body>
 </html>

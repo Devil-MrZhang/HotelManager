@@ -13,12 +13,8 @@ public class Room {
 	public void setId(Integer id) {
 		this.id = id;
 	}
-	public Integer getRoomnum() {
-		return roomnum;
-	}
-	public void setRoomnum(Integer roomnum) {
-		this.roomnum = roomnum;
-	}
+
+
 	public Double getPrice() {
 		return price;
 	}
@@ -43,6 +39,18 @@ public class Room {
 	public void setImg_url(String img_url) {
 		this.img_url = img_url;
 	}
+	public Integer getRoomnum() {
+		return roomnum;
+	}
+	public void setRoomnum(Integer roomnum) {
+		this.roomnum = roomnum;
+	}
+	@Override
+	public String toString() {
+		return "Room  roomnum=" + roomnum + ", price=" + price + ", bednumber=" + bednumber + ", type="
+				+ type + ", img_url=" + img_url + "]";
+	}
+
 	
 	
 }

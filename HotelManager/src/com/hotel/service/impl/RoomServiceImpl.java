@@ -31,6 +31,31 @@ public class RoomServiceImpl implements RoomService {
 	
 		return roomMapper.selectAll();
 	}
+	@Override
+	public void addRoom(Room room) {
+		roomMapper.add(room);
+		
+	}
+	@Override
+	public void updateRoom(Room room) {
+		roomMapper.update(room);
+		
+	}
+	@Override
+	public Room findRoomById(Integer id) {
+	
+		return roomMapper.selectRoomById(id);
+	}
+	@Override
+	public void removeRoom(Integer id) {
+		roomMapper.delete(id);
+		
+	}
+	@Override
+	public List<Room> selectRoom(Integer roomnum) {
+		return roomMapper.selectByRoomNum(roomnum);
+		
+	}
 
 
 
