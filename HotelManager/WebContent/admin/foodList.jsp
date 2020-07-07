@@ -6,18 +6,18 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link href="css/reset.css" rel="stylesheet" />
-    <link href="css/iconfont.css" rel="stylesheet" />
-    <link href="css/index.css" rel="stylesheet" />
-    <script src="js/jquery-1.9.1.min.js"></script>
-    <script src="js/f.js"></script>
+    <link href="${pageContext.request.contextPath}/css/reset.css" rel="stylesheet" />
+    <link href="${pageContext.request.contextPath}/css/iconfont.css" rel="stylesheet" />
+    <link href="${pageContext.request.contextPath}/css/index.css" rel="stylesheet" />
+    <script src="${pageContext.request.contextPath}/js/jquery-1.9.1.min.js"></script>
+    <script src="${pageContext.request.contextPath}/js/f.js"></script>
     <title>餐品管理</title>
 </head>
 <body>
     <div class="PublicHead clearfix">
         <div class="leftBox clearfix">
             <div class="companyLogo">
-                <img src="images/logo.jpg" />
+                <img src="${pageContext.request.contextPath}/images/logo.jpg" />
             </div>
             <!--<i class="iconfont icon-caidan"></i>-->
 
@@ -34,7 +34,7 @@
                     管理员
                 </div>
             </div>
-            <a href="index.html">
+            <a href="${pageContext.request.contextPath}/index.html">
                 <div class="dropOutBox">
                     <i class="iconfont icon-app_icons--">
                     </i>
@@ -53,7 +53,7 @@
                 
                 <a href="OrderManagement.html">
                     <li><i class="iconfont icon-tubiao_dingdan"></i><span>订单管理</span></li>
-                </a>
+                </a>0
                
                 <a href="ProductManagement.html">      <li class="Select"><i class="iconfont icon-weibiaoti1"></i><span>产品管理</span></li></a>
          <a href="roomManagement.html">      <li><i class="iconfont icon-weibiaoti2"></i><span>房间管理</span></li></a>
