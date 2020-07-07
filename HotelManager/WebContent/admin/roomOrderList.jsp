@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jstl/core_rt" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,8 +10,48 @@
     <link href="css/reset.css" rel="stylesheet" />
     <link href="css/iconfont.css" rel="stylesheet" />
     <link href="css/index.css" rel="stylesheet" />
-    <script src="js/jquery-1.9.1.min.js"></script>
+    <script src="jquery/jquery-1.9.1.min.js"></script>
     <script src="js/f.js"></script>
+    
+    <script language="javascript"
+	src="${pageContext.request.contextPath}/admin/js/public.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/admin/jquery/jquery.js"></script>
+<script type="text/javascript">
+	
+	function checkAll() {
+		
+		var flag=document.getElementById("ckAll").checked;
+	
+		var ids=document.getElementsByName("ids");
+		for (var i = 0; i < ids.length; i++) {
+			ids[i].checked=flag;
+		}
+	}
+	
+	function delAllBooks(){
+		var ids=document.getElementsByName("ids");
+		var str="";
+		for (var i = 0; i < ids.length; i++) {
+			if (ids[i].checked) {
+				str+="ids="+ids[i].value+"&";
+			}
+		}
+		if(str!=""){
+			
+			if(confirm("是否要删除所选中的书籍?")){
+				str=str.substring(0,str.length-1);
+				location.href="${pageContext.request.contextPath}/admin/delAllOrders?"+str;
+			}
+			
+		}else{
+			alert("请选择要删除的书籍")
+		}
+		
+		
+		
+		
+	}
+</script>
     <title>订单管理</title>
 </head>
 <body>
@@ -48,22 +89,13 @@
         <!--左侧-->
         <div class="leftBox">
             <ul>
-            	<!--
-                	作者：offline
-                	时间：2020-06-24
-                	描述：
-              <a href="UserManagement.html"> <li class=""><i class="iconfont icon-yonghuguanli"></i><span>用户管理</span></li></a>
-              <a href="ClassificationManagement.html">
-                    <li><i class="iconfont icon-fenlei"></i><span>分类管理</span></li>
+            
+                <a href="${pageContext.request.contextPath}/admin/showRoomOrders">
+                    <li><i class="iconfont icon-tubiao_dingdan"></i><span>订单管理</span></li>
                 </a>
-                -->
-              
-                <a href="OrderManagement.html">
-                    <li class="Select"><i class="iconfont icon-tubiao_dingdan"></i><span>订单管理</span></li>
-                </a>
-              
+             
                 <a href="ProductManagement.html">      <li><i class="iconfont icon-weibiaoti1"></i><span>产品管理</span></li></a>
-          <a href="roomManagement.html">      <li><i class="iconfont icon-weibiaoti2"></i><span>房间管理</span></li></a>
+          <a href="${pageContext.request.contextPath}/admin/showRoomList">       <li class="Select"><i class="iconfont icon-tubiao_dingdan"></i><span>订单管理</span></li></a>
             </ul>
         </div>
         <!--右侧-->
@@ -74,16 +106,20 @@
                     <span class="span1">订单管理 </span> <span class="span2">后台订单管理列表</span>
                 </div>
                 <!--查询-->
-                <div class="InquireBox clearfix">
+                <form action="${pageContext.request.contextPath}/admin/selectRoomOrder" method="post">
+                 <div class="InquireBox clearfix">
                     <div class="InquireleftBox">
                         <div class="Text">订单号：</div>
-                        <div class="InputDiv">   <input class="phoneInput" placeholder="请输入你需要查询的订单号" /></div>
+                        <div class="InputDiv">   <input name="orderid" class="phoneInput" placeholder="请输入你需要查询的订单id" /></div>
                     </div>
                     <div class="PublicBtnIcon Color1Btn fr">
                         <i class="iconfont icon-icon-chaxun"></i>
-                        <span>查询</span>
+                        <input type="submit" value="查询"/>
                     </div>
                 </div>
+                
+                </form>
+               
                 <!--表修改-->
                 <div class="InquireTableBox">
                     <div class="headbox">
@@ -93,13 +129,11 @@
                         <!--批量删除-->
                         <div class="PublicBtnIcon Color5Btn">
                             <i class="iconfont  icon-shanchu"></i>
-                            <span>批量删除</span>
+                            <span  onclick="delAllBooks()">批量删除</span>
+                         
                         </div>
 
-                        <!--<div class="PublicBtnIcon Color2Btn fr Js_edit">
-                            <i class="iconfont icon-changyongtubiao-mianxing-"></i>
-                            <span>添加</span>
-                        </div>-->
+                    
                     </div>
 
                     <!--查询到的表格-->
@@ -109,49 +143,49 @@
                             <thead>
                                 <tr>
                                     <td>
-                                        <input id="inputcheck" class="inputcheck" type="checkbox" name="inputcheck" />
+                                        <input onclick="checkAll()" id="ckAll" class="inputcheck" type="checkbox" name="inputcheck" />
                                         <label for="inputcheck"></label>
-                                        <span>全选</span>
+                                        <span >全选</span>
                                     </td>
-                                   
-                                    <td>姓名</td>
-                                    <td>手机号</td>
-                                    <td>邮箱</td>
-                                    <td>应付金额</td>
-                                    <td>订单编号</td>
-                                    <td>支付状态</td>
+                                    <td>ID</td>
+                                    <td>房间ID</td>
+                                    <td>用户ID</td>
                                     <td>下单时间</td>
-                                    <td>超时时间</td>
+                                    <td>过期时间</td>
+                                    <td>支付状态</td>
                                     <td>操作</td>
                                 </tr>
 
                             </thead>
                             <tbody>
-                                <tr>
+                            	<c:forEach var="item" items="${roomOrders }">
+                            	
+                            	    <tr>
                                     <td>
-                                        <input id="aa" class="inputcheck" type="checkbox" name="inputcheck" />
+                                        <input class="inputcheck" type="checkbox" name="ids" value="${item.id }" />
                                         <label for="aa"></label>
                                     </td>
-                                   
-                                    <td>尚能大大</td>
-                                    <td>17612164871</td>
-                                    <td>上海市杨浦区宁国路503号3栋C08-C09</td>
-                                    <td>1200.00元</td>
-                                    <td>201711024866544846</td>
-                                    <td>支付宝</td>
-                                    <td>201711024866544846</td>
-                                    <td>2017-11-01 21:15:23</td>
+                                    <td>${item.id }</td>
+                                    <td>${item.room_id }</td>
+                                    <td>${item.user_id }</td>
+                                    <td>${item.ordertime }</td>
+                                    <td>${item.overtime }</td>
+                                    <td>${item.paystate}</td>
+                               
 
                                     <td>
 
-                                     
+                                    
 
                                         <div class="PublicTableBtnIcon Color4Btn Js_delete">
                                             <i class="iconfont icon-shanchu"></i>
-                                            <span>删除</span>
+                                            <span><a href="${pageContext.request.contextPath }/admin/deleteRoomOrder?id=${item.id}">删除</span>
                                         </div>
                                     </td>
                                 </tr>
+                            	
+                            	
+                            	</c:forEach>
 
                               
 
@@ -160,7 +194,9 @@
                         </table>
 
                     </div>
+            
 
-                    
+
+  
 </body>
 </html>

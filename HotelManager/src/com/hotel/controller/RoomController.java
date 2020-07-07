@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.multipart.MultipartFile;
 
 import com.hotel.entity.Room;
+import com.hotel.entity.RoomOrder;
 import com.hotel.service.RoomService;
 @Controller
 public class RoomController {
@@ -102,12 +103,44 @@ public class RoomController {
 	public String selectRoom(Integer roomnum,Model model) {
 		List<Room> list = roomService.selectRoom(roomnum);
 		model.addAttribute("rooms", list);
-		System.out.println("*****************"+list);
 		
 		return "admin/roomList";
 	}
+	@RequestMapping("admin/showRoomOrders")
+	public String selectRoomOrders(Model model) {
+		List<RoomOrder> list = roomService.selectRoomOrders();
+		model.addAttribute("roomOrders", list);
+		System.out.println("*****************"+list);
+		
+		return "admin/roomOrderList";
+	}
 	
-
+	@RequestMapping("admin/deleteRoomOrder")
+	public String deleteRoomOrder(Integer id) {
+		roomService.removeRoomOrder(id);
+		
+		return "redirect:showRoomOrders";
+		
+	}
 	
+	@RequestMapping("admin/delAllOrders")
+	public String delAllOrders(String[] ids) {
+		for (int i = 0; i < ids.length; i++) {
+			
+			roomService.removeRoomOrder(Integer.parseInt(ids[i]));
+		}
+		
+		return "redirect:showRoomOrders";
+	}
+	
+	@RequestMapping("admin/selectRoomOrder")
+	public String selectRoomOrder(Integer orderid,Model model) {
+		List<RoomOrder> list = roomService.selectOrderById(orderid);
+		System.out.println(list);
+		System.out.println("*************"+orderid);
+		model.addAttribute("roomOrders", list);
+		
+		return "admin/roomOrderList";
+	}
 	
 }

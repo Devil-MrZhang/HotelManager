@@ -15,6 +15,7 @@ import org.springframework.transaction.annotation.Transactional;
 import com.hotel.dao.RoomMapper;
 import com.hotel.dao.UserMapper;
 import com.hotel.entity.Room;
+import com.hotel.entity.RoomOrder;
 import com.hotel.entity.User;
 import com.hotel.service.RoomService;
 import com.hotel.service.UserService;
@@ -55,6 +56,21 @@ public class RoomServiceImpl implements RoomService {
 	public List<Room> selectRoom(Integer roomnum) {
 		return roomMapper.selectByRoomNum(roomnum);
 		
+	}
+	@Override
+	public List<RoomOrder> selectRoomOrders() {
+		
+		return roomMapper.selectAllOrders();
+	}
+	@Override
+	public void removeRoomOrder(Integer id) {
+		roomMapper.deleteRoomOrder(id);
+		
+	}
+	@Override
+	public List<RoomOrder> selectOrderById(Integer orderid) {
+		// TODO Auto-generated method stub
+		return roomMapper.selectOrderById(orderid);
 	}
 
 

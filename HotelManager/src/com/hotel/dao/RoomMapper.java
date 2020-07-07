@@ -10,6 +10,7 @@ import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Update;
 
 import com.hotel.entity.Room;
+import com.hotel.entity.RoomOrder;
 @Mapper
 public interface RoomMapper {
 	@Select("select * from t_room")
@@ -24,4 +25,10 @@ public interface RoomMapper {
 	public void delete(@Param("id")Integer id);
 	@Select("select * from t_room where roomnum=#{roomnum}")
 	public List<Room> selectByRoomNum(@Param("roomnum")Integer roomnum);
+	@Select("select * from t_roomorder")
+	public List<RoomOrder> selectAllOrders();
+	@Delete("delete from t_roomorder where id=#{id}")
+	public void deleteRoomOrder(@Param("id")Integer id);
+	@Select("select * from t_roomorder where id=#{id}")
+	public List<RoomOrder> selectOrderById(@Param("id")Integer orderid);
 }

@@ -90,12 +90,12 @@
         <div class="leftBox">
             <ul>
             
-                <a href="OrderManagement.html">
+                <a href="${pageContext.request.contextPath}/admin/showRoomOrders">
                     <li><i class="iconfont icon-tubiao_dingdan"></i><span>订单管理</span></li>
                 </a>
              
                 <a href="ProductManagement.html">      <li><i class="iconfont icon-weibiaoti1"></i><span>产品管理</span></li></a>
-          <a href="roomManagement.html">       <li class="Select"><i class="iconfont icon-tubiao_dingdan"></i><span>房间管理</span></li></a>
+          <a href="${pageContext.request.contextPath}/admin/showRoomList">       <li class="Select"><i class="iconfont icon-tubiao_dingdan"></i><span>房间管理</span></li></a>
             </ul>
         </div>
         <!--右侧-->
