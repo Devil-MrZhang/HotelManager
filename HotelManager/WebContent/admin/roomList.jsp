@@ -96,6 +96,10 @@
              
                 <a href="ProductManagement.html">      <li><i class="iconfont icon-weibiaoti1"></i><span>产品管理</span></li></a>
           <a href="${pageContext.request.contextPath}/admin/showRoomList">       <li class="Select"><i class="iconfont icon-tubiao_dingdan"></i><span>房间管理</span></li></a>
+           
+              <a href="${pageContext.request.contextPath}/admin/showfoodList">
+                    <li><i class="iconfont icon-tubiao_dingdan"></i><span>全部餐品</span></li>
+                </a>
             </ul>
         </div>
         <!--右侧-->
