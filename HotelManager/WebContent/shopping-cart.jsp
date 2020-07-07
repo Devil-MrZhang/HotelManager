@@ -253,7 +253,7 @@ function jian (num){
     $(".cart .content ul li .money .m-c").each(function(i){  
       mdan = mdan + parseInt($(this).html());  
     });
-    // 金额总数的值
+        // 金额总数的值
     $('.cart .content .all p i').html(mdan);
 } ;
 $(function(){
