@@ -17,35 +17,12 @@
 	src="${pageContext.request.contextPath}/admin/js/public.js"></script>
 <script type="text/javascript" src="${pageContext.request.contextPath}/admin/jquery/jquery-1.11.0.js"></script>
 <script type="text/javascript" src="${pageContext.request.contextPath}/admin/jquery/jquery-migrate-1.2.1.js"></script>
-<script type="text/javascript">
-	
 
-/** 删除员工绑定点击事件 */
-$(document).ready(function(){
-	  $("#deletes").click(function(){
-		   alert("111111111");
-		   var chk_value =[];//定义一个数组    
-           $('input[type="checkbox"][id^="boxx"]:checked').each(function(){//遍历每一个名字为interest的复选框，其中选中的执行函数    
-           chk_value.push($(this).val());//将选中的值添加到数组chk_value中    
-          alert(chk_value);
-           
-           });	
-           if(confirm("是否要删除所选中的s?")){
-				   
-					  console.log("删除："+chk_value);
-					   // 发送请求
-					   window.location = "${pageContext.request.contextPath }/admin/fooddelete?idd=" + chk_value;
-				   
-			   }; 
-	  
-	  });
- })
- 
-
-</script>
     <title>订单管理</title>
 </head>
-<body>
+<body>${sessionScope.foodup }的值${foodup }
+
+
 <button id="xxx">0000000000</button>
     <div class="PublicHead clearfix">
         <div class="leftBox clearfix">
@@ -154,40 +131,41 @@ $(document).ready(function(){
 
                             </thead>
                             <tbody>
-                            	<c:forEach var="item" items="${foods }">
+                            <form action="foodupdate">
+                            	<input type="hidden" name="p" value="2">
+                            	  <input type="hidden" name="id" value="${foodup.id }"></input>
                             	
                             	    <tr>
                                     <td>
-                                    <input type="checkbox" id="boxx" value="${item.id}">
-                                       <%--  <input class="inputcheck" type="checkbox" name="ids" value="${item.id }" /> --%>
+                                    <input type="checkbox" id="boxx" value="${foodup.id}">
+                                        <input class="inputcheck" type="checkbox" name="ids" value="${item.id }" />
                                         <label for="aa"></label>
                                     </td>
-                                      <td>${item.id }</td>
-                                    <td>${item.name }</td>
-                                    <td>${item.type }</td>
-                                    <td>${item.price }</td>
-                                    <td>${item.describ }</td>
-                                    <td>${item.img_url}</td>
+                                      <td>${foodup.id }</td>
+                                      
+                                       <td><input type="text" name="name" value="${foodup.name }"/></td>
+                                        <td><input type="text" name="type" value="${foodup.type }"/></td>
+										<td><input type="text" name="price" value="${foodup.price }"/></td>
+										<td><input type="text" name="describ" value="${foodup.describ }"/></td>
+										<td><input type="text" name="img_url" value="${foodup.img_url }"/></td>
+                                  
+                                
                                
 
                                     <td>
 
                                         <div class="PublicTableBtnIcon Color3Btn Js_edit">
                                             <i class="iconfont icon-tubiaozhizuomobanyihuifu-"></i>
-                                            <span><a href="${pageContext.request.contextPath }/admin/foodupdate?id=${item.id}&p=1">编辑</a></span>
+                                            <span><button type="submit">编辑</button></span>
                                         </div>
 
-                                        <div class="PublicTableBtnIcon Color4Btn Js_delete">
-                                            <i class="iconfont icon-shanchu"></i>
-                                            <span><a href="${pageContext.request.contextPath }/admin/fooddelete?idd=${item.id}">删除</span>
-                                        </div>
+                                        
                                     </td>
                                 </tr>
                             	
-                            	
-                            	</c:forEach>
+                           
 
-                              
+                              </form>
 
 
                             </tbody>

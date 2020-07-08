@@ -5,20 +5,20 @@ private int id;
 private String name;
 private String type;
 private String price;
-private String describe;
+private String describ;
 private String img_url;
 @Override
 public String toString() {
-	return "Food [id=" + id + ", name=" + name + ", type=" + type + ", price=" + price + ", describe=" + describe
+	return "Food [id=" + id + ", name=" + name + ", type=" + type + ", price=" + price + ", describe=" + describ
 			+ ", img_url=" + img_url + "]";
 }
-public Food(int id, String name, String type, String price, String describe, String img_url) {
+public Food(int id, String name, String type, String price, String describ, String img_url) {
 	super();
 	this.id = id;
 	this.name = name;
 	this.type = type;
 	this.price = price;
-	this.describe = describe;
+	this.describ = describ;
 	this.img_url = img_url;
 }
 public Food() {
@@ -49,11 +49,12 @@ public String getPrice() {
 public void setPrice(String price) {
 	this.price = price;
 }
-public String getDescribe() {
-	return describe;
+
+public String getDescrib() {
+	return describ;
 }
-public void setDescribe(String describe) {
-	this.describe = describe;
+public void setDescrib(String describ) {
+	this.describ = describ;
 }
 public String getImg_url() {
 	return img_url;

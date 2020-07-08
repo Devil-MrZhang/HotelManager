@@ -40,6 +40,11 @@ public class FoodServiceImpl implements FoodService {
 		// TODO Auto-generated method stub
 		 foodMapper.delete(id);
 	}
+	@Override
+	public void updatefood(Food food) {
+		foodMapper.update(food);
+		
+	}
 
 
 

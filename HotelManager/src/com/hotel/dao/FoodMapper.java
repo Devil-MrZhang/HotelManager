@@ -18,8 +18,8 @@ public interface FoodMapper {
 	public List<Food> selectAll();
 //	@Insert("insert into t_room(roomnum,price,bednumber,type,img_url) values(#{room.roomnum},#{room.price},#{room.bednumber},#{room.type},#{room.img_url})")
 //	public void add(@Param("Food")Food Food);
-//	@Update("update t_room set roomnum=#{room.roomnum},price=#{room.price},bednumber=#{room.bednumber},type=#{room.type},img_url=#{room.img_url} where id=#{room.id}")
-//	public void update(@Param("Food")Food Food);
+	@Update("update t_food set name=#{food.name},price=#{food.price},describ=#{food.describ},type=#{food.type},img_url=#{food.img_url} where id=#{food.id}")
+	public void update(@Param("food")Food food);
 //	@Select("select * from t_Food where id=#{id}")
 //	public Food selectFoodById(Integer id);
 	@Delete("delete from t_food where id=#{id}")
