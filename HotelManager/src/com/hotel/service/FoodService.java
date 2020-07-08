@@ -1,7 +1,9 @@
+
 package com.hotel.service;
 
 import java.util.List;
 
+import com.hotel.dao.FoodMapper;
 import com.hotel.entity.Food;
 import com.hotel.entity.Room;
 import com.hotel.entity.RoomOrder;
@@ -13,4 +15,5 @@ public interface FoodService {
 	void removefood(Integer id);
 	void updatefood(Food food);
 
+	
 }
