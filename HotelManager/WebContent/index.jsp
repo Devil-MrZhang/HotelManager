@@ -6,7 +6,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <title>汪氏--首页</title>
+    <title>毕氏--首页</title>
     <link rel="stylesheet" type="text/css" href="css/rest.css" />
     <link rel="stylesheet" type="text/css" href="css/lq.datetimepick.css"/>
 
@@ -33,7 +33,7 @@
             <a href="index.html">
                 <li><span>首页</span><em>首页</em></li>
             </a>
-            <a href="goods-online.html">
+            <a href="food">
                 <li><span>订餐</span><em>订餐</em></li>
             </a>
             <a href="hotel-environment.html">

@@ -38,6 +38,13 @@ public class FoodControcller {
 		return "redirect:showfoodList";
 	}
 	
+	@RequestMapping("food")
+	public String food(Model model){
+		List<Food> food=foodService.showList();
+		model.addAttribute("food", food);
+		return "hotel-reservation";
+		
+	}
 	
 	
 }

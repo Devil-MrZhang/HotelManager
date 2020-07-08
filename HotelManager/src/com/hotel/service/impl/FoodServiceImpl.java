@@ -29,6 +29,7 @@ public class FoodServiceImpl implements FoodService {
 
 	@Resource
 	private FoodMapper foodMapper;
+	
 	@Transactional(readOnly=true)
 	@Override
 	public List<Food> showList() {
