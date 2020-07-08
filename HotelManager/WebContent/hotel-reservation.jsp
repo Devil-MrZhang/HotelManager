@@ -14,8 +14,11 @@
     <link rel="stylesheet" type="text/css" href="css/hotel-reservation.css" />
     <style type="text/css">
     	.bg{
-    		
     		margin: 0px auto;
+    	}
+    	.bg tr,td{
+    		padding:2px;
+    		border:1px solid;
     	}
     </style>
 </head>
@@ -77,7 +80,7 @@
     <div class="container">
         <div class="search_parent">
 <h2>Hotel reservation</h2></div></div></div>
-       <table class="bg"  border="1">
+       <table class="bg">
         	<tr>
         		<td>食品名称</td>
         		<td>食品类型</td>
