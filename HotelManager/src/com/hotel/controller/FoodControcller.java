@@ -1,5 +1,6 @@
 package com.hotel.controller;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -16,6 +17,9 @@ import com.hotel.service.RoomService;
 
 @Controller
 public class FoodControcller {
+	private int id;
+	private List<Food> foodList = new ArrayList<>();
+	
 	@Resource
 	FoodService foodService;
 	@RequestMapping("admin/showfoodList")
@@ -44,6 +48,38 @@ public class FoodControcller {
 		model.addAttribute("food", food);
 		return "hotel-reservation";
 		
+	}
+	
+	public String foodCart(){
+		Food f=null;
+		for(int i=0;i<foodList.size();i++){
+			if(id==foodList.get(i).getId()){
+				f=foodList.get(i);
+				break;
+			}
+		}
+		
+		return "";
+	}
+	
+	
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public FoodService getFoodService() {
+		return foodService;
+	}
+	public void setFoodService(FoodService foodService) {
+		this.foodService = foodService;
+	}
+	public List<Food> getFoodList() {
+		return foodList;
+	}
+	public void setFoodList(List<Food> foodList) {
+		this.foodList = foodList;
 	}
 	
 	

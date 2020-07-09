@@ -31,7 +31,7 @@
             <a href="index.html">
                 <li><span>首页</span><em>首页</em></li>
             </a>
-            <a href="goods-online.html">
+            <a href="food">
                 <li><span>订餐</span><em>订餐</em></li>
             </a>
             <a href="hotel-environment.html">
@@ -94,60 +94,7 @@
                             <div class="delete">删除</div>
                         </div>
                     </div>
-                </li>
-                <li>
-                    <div class="product">
-                       <img src="images/shopping/1.jpg" height="80" alt="" />
-                    </div>
-                    <div class="name">山珍海味</div>
-                    <input type="hidden" class="wqeq2" value="810.00"/>
-                    <input type="hidden" class="zong2" value="1"/>
-                    <div class="money"><em>￥</em><span class="m-c m-c2">810.00</span></div>
-                    <div class="number">
-                        <div class="num-box">
-                            <div onclick="jian('2')" class="shao">-</div>
-                            <div class="num num2">1</div>
-                            <div onclick="jia('2')" class="more">+</div>
-                            <div class="delete">删除</div>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="product">
-                      <img src="images/shopping/1.jpg" height="80" alt="" />
-                    </div>
-                    <div class="name">山珍海味</div>
-                    <input type="hidden" class="wqeq3" value="3400.00"/>
-                    <input type="hidden" class="zong3" value="1"/>
-                    <div class="money"><em>￥</em><span class="m-c m-c3">3400.00</span></div>
-                    <div class="number">
-                        <div class="num-box">
-                            <div onclick="jian('3')" class="shao">-</div>
-                            <div class="num num3">1</div>
-                            <div onclick="jia('3')" class="more">+</div>
-                            <div class="delete">删除</div>
-                        </div>
-                    </div>
-                </li>     
-                
-                
-                                <li>
-                    <div class="product">
-                       <img src="images/shopping/1.jpg" height="80" alt="" />
-                    </div>
-                    <div class="name">山珍海味</div>
-                    <input type="hidden" class="wqeq4" value="3400.00"/>
-                    <input type="hidden" class="zong4" value="1"/>
-                    <div class="money"><em>￥</em><span class="m-c m-c4">3400.00</span></div>
-                    <div class="number">
-                        <div class="num-box">
-                            <div onclick="jian('4')" class="shao">-</div>
-                            <div class="num num4">1</div>
-                            <div onclick="jia('4')" class="more">+</div>
-                            <div class="delete">删除</div>
-                        </div>
-                    </div>
-                </li>                
+                </li>                    
             </ul>
             <div class="all">
                 <p>已选 <span class="zongsu1">3</span>商品合计（不含运费）：<em>￥<i>5020.00</i></em></p>
@@ -156,44 +103,6 @@
         </div>
     </div>
 </div>
-<!-- footer -->
-<div class="footer">
-    <div class="container">
-        <div class="top">
-            <a href="index.html" class="f-logo">
-                <img src="images/f-logo.png" alt="" />
-            </a>
-            <dl>
-                <dt>ABOUT</dt>
-                <a href=""><dd>酒店预订</dd></a>
-                <a href=""><dd>Environmental</dd></a>
-                <a href=""><dd>Hotel culture</dd></a>
-            </dl>
-            <dl>
-                <dt>INTERIOR SPACE</dt>
-                <a href=""><dd>Art&space</dd></a>
-                <a href=""><dd>Kids&space</dd></a>
-                <a href=""><dd>Smart home</dd></a>
-                <a href=""><dd>Restaurant</dd></a>
-            </dl>
-            <dl>
-                <dt>GOODS ONLINE</dt>
-                <a href=""><dd>Furniture</dd></a>
-                <a href=""><dd>Bed</dd></a>
-                <a href=""><dd>Decorations</dd></a>
-            </dl>
-            <dl class="nor">
-                <dt>CONTACT US</dt>
-                <a href=""><dd>酒店预订热线Hotel reservation hotline</dd></a>
-                <a href="tel:400-8888-8888"><dd class="tel">400-8888-8888</dd></a>
-            </dl>
-        </div>
-        <div class="copy">
-            <p>Email  sdfsdfs@sdfsdfsdfsf.com      ADD  sdfasdfsfw8eteigj;sdfkgdfigsng;asdgh;sd<a href="">POWERED BY PID INTERRACTIVE</a></p>
-        </div>
-    </div>
-</div>
-<!-- footer over -->
 <script src="js/jquery.js"></script>
 <script src="js/base.js"></script>
 <script>

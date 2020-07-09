@@ -31,7 +31,7 @@
             <a href="index.html">
                 <li><span>首页</span><em>首页</em></li>
             </a>
-            <a href="goods-online.html">
+            <a href="food">
                 <li><span>订餐</span><em>订餐</em></li>
             </a>
             <a href="hotel-environment.html">

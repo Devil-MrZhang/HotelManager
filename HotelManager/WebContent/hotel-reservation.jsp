@@ -20,6 +20,10 @@
     		padding:2px;
     		border:1px solid;
     	}
+    	.btn{
+    		background-color:#D3DCDD;
+    		border-radius:5px;
+    	}
     </style>
 </head>
 <body style="background:#fafafa url(images/index/h.png) no-repeat 90%  80%;">
@@ -96,7 +100,12 @@
         			<td>${f.price}</td>
         			<td>${f.describe}</td>
         			<td>${f.img_url}</td>
-        			<td>加入购物车</td>
+        			<td>
+						<form action="" method="post">
+							<input type="hidden" name="id" value="${f.id}" />
+							<input value="加入购物车" class="btn" type="submit"/>
+						</form>
+					</td>
         		</tr>
         	</c:forEach>
       
