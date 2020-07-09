@@ -29,7 +29,6 @@ public class FoodServiceImpl implements FoodService {
 
 	@Resource
 	private FoodMapper foodMapper;
-	
 	@Transactional(readOnly=true)
 	@Override
 	public List<Food> showList() {
@@ -40,6 +39,11 @@ public class FoodServiceImpl implements FoodService {
 	public void removefood(Integer id) {
 		// TODO Auto-generated method stub
 		 foodMapper.delete(id);
+	}
+	@Override
+	public void updatefood(Food food) {
+		foodMapper.update(food);
+		
 	}
 
 
