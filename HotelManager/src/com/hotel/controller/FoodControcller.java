@@ -62,7 +62,7 @@ public class FoodControcller{
 	
 	@RequestMapping("foodCart")
 	public String foodCart(int id,HttpServletRequest req){
-		System.out.println(id);
+		
 		Food f=null;
 		f=foodService.selectFoodById(id);
 		
@@ -84,14 +84,36 @@ public class FoodControcller{
 	}
 	
 	@RequestMapping("deleteFood")
-	public String deleteFood(Integer id,HttpServletRequest req){
+	public String deleteFood(Integer id){
 		
-		HttpSession session = req.getSession();
-		
+	
+		for(Food f : foodCart.keySet()){
+			if(id==f.getId()){
+				foodCart.remove(f);
+			}
+			break;
+		}
 		
 		
 		return "shopping-cart";
 	}
+/*	@RequestMapping("jiajian")
+	public String jiajian(int id,int value,HttpServletRequest req){
+		Food f2=new Food();
+		for(Food f : foodCart.keySet()){
+			if(id==f.getId()){
+				if("0".equals(value)){
+					foodCart.remove(f);
+				}
+			}
+			break;
+		}
+		HttpSession session = req.getSession();
+		session.setAttribute("foodCart", foodCart);
+		
+		
+		return "shopping-cart";
+	}*/
 	
 	
 	public int getId() {

@@ -105,7 +105,13 @@
         			<td>${f.key.describ}</td>
         			<td>${f.key.img_url}</td>
         			
-        			<td>${f.value}</td>
+        			<td>
+        				<input type="button" id="jian" value='-'
+        				onclick="('${f.value-1}')" />
+						<input name="text" type="text" value="${f.value }" /> 
+						<input type="button" id="jia" value='+' 
+						onclick="('${f.value+1}')" />
+					</td>
         			
         			<td>
 						<form action="deleteFood" method="post">
