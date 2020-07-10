@@ -83,6 +83,26 @@ public class FoodControcller{
 		return "shopping-cart";
 	}
 	
+	@RequestMapping("deleteFood")
+	public String deleteFood(Integer id,HttpServletRequest req){
+		Food f=null;
+		HttpSession session = req.getSession();
+		Map<Food,Integer> deleteFood = (Map<Food, Integer>) session.getAttribute("deleteFood");
+		
+		
+		for(int i=0;i<foodList.size();i++){
+			
+			if(id==foodList.get(i).getId()){
+				deleteFood.remove(foodList.get(i).getId());
+			}
+			break;
+		}
+		session.setAttribute("deleteFood", deleteFood);
+		
+		
+		return "shopping-cart";
+	}
+	
 	
 	public int getId() {
 		return id;

@@ -108,7 +108,7 @@
         			<td>${f.value}</td>
         			
         			<td>
-						<form action="" method="post">
+						<form action="deleteFood" method="post">
 							<input type="hidden" name="id" value="${f.key.id}" />
 							<input value="删除" class="btn" type="submit"/>
 						</form>
