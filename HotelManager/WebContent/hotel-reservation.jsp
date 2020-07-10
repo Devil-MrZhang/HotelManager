@@ -98,11 +98,11 @@
         			<td>${f.name}</td>
         			<td>${f.type}</td>
         			<td>${f.price}</td>
-        			<td>${f.describe}</td>
+        			<td>${f.describ}</td>
         			<td>${f.img_url}</td>
         			<td>
-						<form action="" method="post">
-							<input type="hidden" name="id" value="${f.id}" />
+						<form action="foodCart" method="post">
+							<input type="hidden" id="id" name="id" value="${f.id}" />
 							<input value="加入购物车" class="btn" type="submit"/>
 						</form>
 					</td>

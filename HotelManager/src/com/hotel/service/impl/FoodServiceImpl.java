@@ -45,6 +45,11 @@ public class FoodServiceImpl implements FoodService {
 		foodMapper.update(food);
 		
 	}
+	@Override
+	public Food selectFoodById(Integer id) {
+		
+		return foodMapper.selectFoodById(id);
+	}
 
 
 

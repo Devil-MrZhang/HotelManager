@@ -3,13 +3,22 @@ package com.hotel.controller;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import javax.annotation.Resource;
+import javax.servlet.ServletConfig;
+import javax.servlet.ServletContext;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
+import org.apache.catalina.connector.Request;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.context.support.ServletContextResource;
 
 import com.hotel.entity.Food;
 import com.hotel.entity.Room;
@@ -17,7 +26,7 @@ import com.hotel.service.FoodService;
 import com.hotel.service.RoomService;
 
 @Controller
-public class FoodControcller {
+public class FoodControcller{
 	private int id;
 	private List<Food> foodList = new ArrayList<>();
 	
@@ -51,16 +60,27 @@ public class FoodControcller {
 		
 	}
 	
-	public String foodCart(){
+	@RequestMapping("foodCart")
+	public String foodCart(int id,HttpServletRequest req){
+		System.out.println(id);
 		Food f=null;
-		for(int i=0;i<foodList.size();i++){
-			if(id==foodList.get(i).getId()){
-				f=foodList.get(i);
-				break;
-			}
+		f=foodService.selectFoodById(id);
+		
+		int num=1;
+		HttpSession session = req.getSession();
+		Map<Food,Integer> foodCart = (Map<Food, Integer>) session.getAttribute("foodCart");
+		
+		if(foodCart==null){
+			foodCart=new HashMap<Food,Integer>();
+		}
+		if(foodCart.containsKey(f)){
+			num=foodCart.get(f)+1;
 		}
 		
-		return "";
+		foodCart.put(f, num);
+		session.setAttribute("foodCart", foodCart);
+	
+		return "shopping-cart";
 	}
 	
 	

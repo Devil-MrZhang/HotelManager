@@ -20,8 +20,8 @@ public interface FoodMapper {
 //	public void add(@Param("Food")Food Food);
 	@Update("update t_food set name=#{food.name},price=#{food.price},describ=#{food.describ},type=#{food.type},img_url=#{food.img_url} where id=#{food.id}")
 	public void update(@Param("food")Food food);
-//	@Select("select * from t_Food where id=#{id}")
-//	public Food selectFoodById(Integer id);
+	@Select("select * from t_food where id=#{id}")
+	public Food selectFoodById(Integer id);
 	@Delete("delete from t_food where id=#{id}")
 	public void delete(@Param("id")Integer id);
 //	@Select("select * from t_Food where roomnum=#{roomnum}")

@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,6 +11,20 @@
     <link rel="stylesheet" type="text/css" href="css/rest.css" />
     <link rel="stylesheet" type="text/css" href="css/base.css" />
     <link rel="stylesheet" type="text/css" href="css/shopping-cart.css" />
+    <style type="text/css">
+    	.bg{
+    		margin: 0px auto;
+    		text-align:center;
+    	}
+    	.bg tr,td{
+    		padding:4px;
+    		border:1px solid;
+    	}
+    	.btn{
+    		background-color:#D3DCDD;
+    		border-radius:5px;
+    	}
+    </style>
 </head>
 <body style="background:#fafafa;"  onselectstart="return false">
 <!-- header -->
@@ -71,33 +86,40 @@
             <div class="child nor">3.提交订单</div>
         </div>
         <div class="content">
-            <div class="title">
-                <p>菜品</p>
-                <p>名称</p>
-                <p>价格</p>
-                <p>数量</p>
-            </div>
-            <ul>
-                <li>
-                    <div class="product">
-                        <img src="images/shopping/1.jpg" height="80" alt="" />
-                    </div>
-                    <div class="name">山珍海味</div>
-                    <input type="hidden" class="wqeq1" value="100.00"/>
-                    <input type="hidden" class="zong1" value="1"/>
-                    <div class="money"><em>￥</em><span class="m-c m-c1">100.00</span></div>
-                    <div class="number">
-                        <div class="num-box">
-                            <div onclick="jian('1')" class="shao">-</div>
-                            <div class="num num1">1</div>
-                            <div onclick="jia('1')" class="more">+</div>
-                            <div class="delete">删除</div>
-                        </div>
-                    </div>
-                </li>                    
-            </ul>
+             <table class="bg">
+        	<tr>
+        		<td>食品名称</td>
+        		<td>食品类型</td>
+        		<td>食品价格</td>
+        		<td>食品描述</td>
+        		<td>食品图片</td>
+        		<td>食品数量</td>
+        		<td>&nbsp;</td>
+        	</tr>
+        	<c:set var="sum" value="0" > </c:set>
+        	<c:forEach items="${foodCart}" var="f">
+        		<tr>
+        			<td>${f.key.name}</td>
+        			<td>${f.key.type}</td>
+        			<td>${f.key.price}</td>
+        			<td>${f.key.describ}</td>
+        			<td>${f.key.img_url}</td>
+        			
+        			<td>${f.value}</td>
+        			
+        			<td>
+						<form action="" method="post">
+							<input type="hidden" name="id" value="${f.key.id}" />
+							<input value="删除" class="btn" type="submit"/>
+						</form>
+					</td>
+        		</tr>
+        		<c:set var="sum" value="${sum+f.value*f.key.price }"> </c:set>
+        	</c:forEach>
+      
+        </table>
             <div class="all">
-                <p>已选 <span class="zongsu1">3</span>商品合计（不含运费）：<em>￥<i>5020.00</i></em></p>
+                <p>已选 <span class="zongsu1">3</span>商品合计（不含运费）：<em>￥<i>${sum}元</i></em></p>
                 <a href="shopping-cart_two.html"><button>结算</button></a>
             </div>
         </div>

@@ -10,7 +10,7 @@ import com.hotel.entity.RoomOrder;
 import com.hotel.entity.User;
 
 public interface FoodService {
-	
+	Food selectFoodById(Integer id);
 	List<Food> showList();
 	void removefood(Integer id);
 	void updatefood(Food food);
