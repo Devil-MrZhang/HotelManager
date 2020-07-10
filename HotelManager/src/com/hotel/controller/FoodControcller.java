@@ -29,7 +29,7 @@ import com.hotel.service.RoomService;
 public class FoodControcller{
 	private int id;
 	private List<Food> foodList = new ArrayList<>();
-	
+	private Map<Food,Integer> foodCart= new HashMap<>();
 	@Resource
 	FoodService foodService;
 	@RequestMapping("admin/showfoodList")
@@ -68,7 +68,7 @@ public class FoodControcller{
 		
 		int num=1;
 		HttpSession session = req.getSession();
-		Map<Food,Integer> foodCart = (Map<Food, Integer>) session.getAttribute("foodCart");
+		foodCart = (Map<Food, Integer>) session.getAttribute("foodCart");
 		
 		if(foodCart==null){
 			foodCart=new HashMap<Food,Integer>();
@@ -85,19 +85,9 @@ public class FoodControcller{
 	
 	@RequestMapping("deleteFood")
 	public String deleteFood(Integer id,HttpServletRequest req){
-		Food f=null;
+		
 		HttpSession session = req.getSession();
-		Map<Food,Integer> deleteFood = (Map<Food, Integer>) session.getAttribute("deleteFood");
 		
-		
-		for(int i=0;i<foodList.size();i++){
-			
-			if(id==foodList.get(i).getId()){
-				deleteFood.remove(foodList.get(i).getId());
-			}
-			break;
-		}
-		session.setAttribute("deleteFood", deleteFood);
 		
 		
 		return "shopping-cart";
@@ -121,6 +111,12 @@ public class FoodControcller{
 	}
 	public void setFoodList(List<Food> foodList) {
 		this.foodList = foodList;
+	}
+	public Map<Food, Integer> getFoodCart() {
+		return foodCart;
+	}
+	public void setFoodCart(Map<Food, Integer> foodCart) {
+		this.foodCart = foodCart;
 	}
 	
 	
