@@ -20,10 +20,7 @@
 
     <title>订单管理</title>
 </head>
-<body>${sessionScope.foodup }的值${foodup }
-
-
-<button id="xxx">0000000000</button>
+<body>
     <div class="PublicHead clearfix">
         <div class="leftBox clearfix">
             <div class="companyLogo">
@@ -78,20 +75,7 @@
                 <div class="PublicPointToAgeText">
                     <span class="span1">订单管理 </span> <span class="span2">后台订单管理列表</span>
                 </div>
-                <!--查询-->
-                <form action="${pageContext.request.contextPath}/admin/selectRoom" method="post">
-                 <div class="InquireBox clearfix">
-                    <div class="InquireleftBox">
-                        <div class="Text">订单号：</div>
-                        <div class="InputDiv">   <input name="roomnum" class="phoneInput" placeholder="请输入你需要查询的订单号" /></div>
-                    </div>
-                    <div class="PublicBtnIcon Color1Btn fr">
-                        <i class="iconfont icon-icon-chaxun"></i>
-                        <input type="submit" value="查询"/>
-                    </div>
-                </div>
-                
-                </form>
+               
                
                 <!--表修改-->
                 <div class="InquireTableBox">
@@ -99,12 +83,7 @@
                         <div class="headboxtext">
                             <span class="span1">后台订单管理列表</span>
                         </div>
-                        <!--批量删除-->
-                        <div class="PublicBtnIcon Color5Btn">
-                            <i class="iconfont  icon-shanchu"></i>
-                            <span id="deletes"   >批量删除</span>
-                             <span><a href="${pageContext.request.contextPath }/admin/add.jsp">添加房间</a></span>
-                        </div>
+                        
 
                     
                     </div>
@@ -117,7 +96,6 @@
                                 <tr>
                                     <td>
                                         <input onclick="checkAll()" id="ckAll" class="inputcheck" type="checkbox" name="inputcheck" />
-                                        <label for="inputcheck"></label>
                                         <span >全选</span>
                                     </td>
                                     <td>ID</td>
@@ -131,15 +109,13 @@
 
                             </thead>
                             <tbody>
-                            <form action="foodupdate">
-                            	<input type="hidden" name="p" value="2">
+                            <form action="foodupup">
+                            	<input type="hidden" name="i" value="1">
                             	  <input type="hidden" name="id" value="${foodup.id }"></input>
                             	
                             	    <tr>
                                     <td>
                                     <input type="checkbox" id="boxx" value="${foodup.id}">
-                                        <input class="inputcheck" type="checkbox" name="ids" value="${item.id }" />
-                                        <label for="aa"></label>
                                     </td>
                                       <td>${foodup.id }</td>
                                       

@@ -14,6 +14,7 @@ public interface FoodService {
 	List<Food> showList();
 	void removefood(Integer id);
 	void updatefood(Food food);
-	
+	List<Food> selectOrderById(Integer orderid);
+	void addfood(Food food);
 	
 }
