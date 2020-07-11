@@ -349,7 +349,7 @@ body {
 #header .nav .login .login-c:hover {
   background: url(../images/login_hover.png) no-repeat center center;
 }
-#header .nav .login .shoppin{
+#header .nav .login .shoppin {
   width: 35px;
   height: 35px;
   overflow: hidden;
@@ -368,16 +368,14 @@ body {
 h2 {
   font-size: 60px;
   color: #1e1e1e;
-  padding-top: 10px;
   padding-bottom: 30px;
+  padding-top: 10px;
   font-family: 'acanthusregular';
 }
 .search_parent {
   overflow: hidden;
-  font-size: 20px;
 }
 .search_parent h2 {
-  margin-top: 10px;
   float: left;
 }
 .search_parent .search {

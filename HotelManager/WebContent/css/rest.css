@@ -37,27 +37,3 @@ input[type="button"], input[type="submit"], input[type="reset"],input[type="text
     font-style: normal;
 
 }
-.qwe{
-	width: 100%;
-	height: 200px;
-}
-.qwe1{
-	top: -60px;
-	left: 10%;
-	position: relative;
-	border: 1px solid  #FD5E06;
-	height: 200px;
-	color: #000000;
-	width: 35%;
-	 border-radius: 50px;
-}
-.qwe2{
-	 border-radius: 8px;
-	top: 70px;
-	left: 35px;
-	position: relative;
-	border: 1px solid #000000;	
-	color: #000000;
-	width: 100px;
-	height: 50px;
-}

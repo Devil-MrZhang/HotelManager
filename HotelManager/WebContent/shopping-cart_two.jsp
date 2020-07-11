@@ -6,8 +6,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <title>中民--精品在线</title>
-    <link rel="stylesheet" type="text/css" href="css/rest.css" />
+    <title>食品订单信息</title>
+     <link rel="stylesheet" type="text/css" href="css/rest.css" />
     <link rel="stylesheet" type="text/css" href="css/base.css" />
     <link rel="stylesheet" type="text/css" href="css/shopping-cart_two.css" />
 </head>
@@ -28,14 +28,27 @@
         </div>
          <ul class="nav">
             <div class="navTop"></div>
+           <a href="index.html">
+            <div class="m-logo">
+                <img src="images/logo.png" alt="" />
+            </div>
+        </a>
+        <div class="bigBox00"></div>
+        <div class="wapBtn">
+            <span class="one"></span>
+            <span class="two"></span>
+            <span class="three"></span>
+        </div>
+        <ul class="nav">
+            <div class="navTop"></div>
             <a href="index.html">
                 <li><span>首页</span><em>首页</em></li>
             </a>
             <a href="goods-online.html">
-                <li><span>订餐</span><em>订餐</em></li>
+                <li class="on"><span>订餐</span><em>订餐</em></li>
             </a>
             <a href="hotel-environment.html">
-                <li class="on"><span>酒店预订</span><em>酒店预订</em></li>
+                <li><span>酒店环境</span><em>酒店环境</em></li>
             </a>
             <a href="index.html">
                 <li class="logo">
@@ -43,15 +56,11 @@
                 </li>
             </a>
             <a href="hotel-culture.html">
-                <li><span>反馈建议</span><em>反馈建议</em></li>
+                <li><span>酒店文化</span><em>酒店文化</em></li>
             </a>
             <a href="contact.html">
                 <li><span>联系我们</span><em>联系我们</em></li>
             </a>
-            <a></a>
-            
-            
-            
             <div class="login">
                 <a href="login.html" class="login-c">
                 </a>
@@ -66,7 +75,7 @@
 <div class="cart">
     <div class="container">
         <div class="search_parent">
-            <h2>菜品购物车</h2>
+            <h2>食品订单信息</h2>
             <div class="search"><input type="text" /><img src="images/search01.png" alt="" /></div>
         </div>
         <div class="shopping-nav">
@@ -74,57 +83,27 @@
             <div class="child on">2.填写订单信息</div>
             <div class="child nor">3.提交订单</div>
         </div>
+        <c:set var="sum" value="0" > </c:set>
+        <c:forEach items="${foodCart}" var="foodCart">
         <div class="product">
             <ul>
                 <li>
                     <div class="imgs">
-                         <img src="images/shopping/1.jpg" height="80" alt="" />
+                        <img src="images/shopping/imgs01.png" alt="" />
                     </div>
                     <div class="infos">
-                        <h6>山珍海味</h6>
+                        <h6>${foodCart.key.name}</h6>
                         <p>
-                            <span>价格：￥<em>100.00 </em> </span>
-                            <span>数量：<i>1</i></span>
-                        </p>
-                    </div>
-                </li>
-                <li>
-                    <div class="imgs">
-                        <img src="images/shopping/1.jpg" height="80" alt="" />
-                    </div>
-                    <div class="infos">
-                        <h6>山珍海味</h6>
-                        <p>
-                            <span>价格：￥<em>100.00 </em> </span>
-                            <span>数量：<i>1</i></span>
+                            <span>价格：￥<em>${foodCart.key.price} </em> </span>
+                            <span>数量：<i>${foodCart.value}</i></span>
                         </p>
                     </div>
                 </li>
             </ul>
         </div> 
-        <ul class="person">
-            <li>
-                <div class="area">
-                    <span>联系人：Rose</span>
-                    <span>联系电话：1504551859</span>
-                    <p>地址：广东省广州市天河区广州大道北时代新世界北塔8楼808室</p>
-                </div>
-                <div class="radio">
-                    <input type="radio" name="i" />
-                </div>
-            </li>
-            <li>
-                <div class="area">
-                    <span>联系人：Rose</span>
-                    <span>联系电话：1504551859</span>
-                    <p>地址：广东省广州市天河区广州大道北时代新世界北塔8楼808室</p>
-                </div>
-                <div class="radio">
-                    <input type="radio" name="i" />
-                </div>
-            </li>
-            
-        </ul>
+         <c:set var="sum" value="${sum+f.value*f.key.price }"></c:set>
+        </c:forEach>
+       
         <div class="recharge">
             <div class="choice red">
                 <span></span>
@@ -163,48 +142,11 @@
             </div>
         </div>
         <div class="jiesuan">
-            <p>合计：<span>￥1740.00</span></p>
+            <p>合计：<span>￥${sum}</span></p>
             <a href="shopping-cart_three.html"><button>结算</button></a>
         </div>
     </div>
 </div>
-<!-- footer -->
-<div class="footer">
-    <div class="container">
-        <div class="top">
-            <a href="index.html" class="f-logo">
-                <img src="images/f-logo.png" alt="" />
-            </a>
-            <dl>
-                <dt>ABOUT</dt>
-                <a href="hotel-reservation.html"><dd>酒店预订</dd></a>
-                <a href="hotel-environment.html"><dd>Environmental</dd></a>
-                <a href="hotel-culture.html"><dd>Hotel culture</dd></a>
-            </dl>
-            <dl>
-                <dt>INTERIOR SPACE</dt>
-                <a href=""><dd>Art&space</dd></a>
-                <a href=""><dd>Kids&space</dd></a>
-                <a href=""><dd>Smart home</dd></a>
-                <a href=""><dd>Restaurant</dd></a>
-            </dl>
-            <dl>
-                <dt>GOODS ONLINE</dt>
-                <a href=""><dd>Furniture</dd></a>
-                <a href=""><dd>Bed</dd></a>
-                <a href=""><dd>Decorations</dd></a>
-            </dl>
-            <dl class="nor">
-                <dt>CONTACT US</dt>
-                <a href=""><dd>酒店预订热线Hotel reservation hotline</dd></a>
-                <a href="tel:400-8888-8888"><dd class="tel">400-8888-8888</dd></a>
-            </dl>
-        </div>
-        <div class="copy">
-            <p>Email  sdfsdfs@sdfsdfsdfsf.com      ADD  sdfasdfsfw8eteigj;sdfkgdfigsng;asdgh;sd<a href="http://www.pidcn.com/" target="_blank">POWERED BY PID INTERRACTIVE</a></p>
-        </div>
-    </div>
-</div>
-<!-- footer over -->
+</body>
 <script src="js/jquery.js"></script>
 <script src="js/base.js"></script>
