@@ -100,7 +100,6 @@ public class FoodControcller{
 	
 	@RequestMapping("admin/foodadd")
 	public String foodadd(Food food,@Param("file")MultipartFile file) {
-		System.out.println(file);
 	
 			
 			String path = request.getServletContext().getRealPath("upload");
@@ -112,6 +111,7 @@ public class FoodControcller{
 			if (!filePath.getParentFile().exists()) {
 				filePath.getParentFile().mkdirs();
 				System.out.println("创建目录" + filePath);
+				
 				
 			}
 			try {
