@@ -25,6 +25,22 @@
     		border-radius:5px;
     	}
     </style>
+    <script type="text/javascript">
+    function changeNum(id,num){
+		num = parseInt(num);
+		
+		
+		if(num<1){
+			if(confirm("是否确认要删除此商品？")){
+				num = 0;
+				location.href="deleteFood?id="+id;
+			}else{
+				num=1;
+			}
+		}
+		location.href="changeNum?id="+id+"&num="+num;
+	}
+    </script>
 </head>
 <body style="background:#fafafa;"  onselectstart="return false">
 <!-- header -->
@@ -105,12 +121,16 @@
         			<td>${f.key.describ}</td>
         			<td>${f.key.img_url}</td>
         			
-        			<td>
-        				<input type="button" id="jian" value='-'
-        				onclick="('${f.value-1}')" />
-						<input name="text" type="text" value="${f.value }" /> 
-						<input type="button" id="jia" value='+' 
-						onclick="('${f.value+1}')" />
+        			<td width="20%">
+        				<input type="button" value='-' style="width:20px"
+						onclick="changeNum('${f.key.id}','${f.value-1 }')">
+
+						<input name="text" type="text" value="${f.value }"
+						style="width:40px;text-align:center" />
+						
+						<input type="button" value='+' style="width:20px"
+						onclick="changeNum('${f.key.id}','${f.value+1 }')">
+
 					</td>
         			
         			<td>

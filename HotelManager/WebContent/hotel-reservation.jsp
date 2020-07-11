@@ -46,8 +46,8 @@
             <a href="index.html">
                 <li><span>HOTEL</span><em>首页</em></li>
             </a>
-            <a href="goods-online.html">
-                <li><span>GOODS ONLINE</span><em>精品在线</em></li>
+            <a href="food">
+                <li><span>订餐</span><em>订餐</em></li>
             </a>
             <a href="hotel-environment.html">
                 <li class="on"><span>HOTEL ENVIRONMENT</span><em>酒店环境</em></li>

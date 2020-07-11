@@ -60,6 +60,7 @@ public class FoodControcller{
 		
 	}
 	
+	@SuppressWarnings("unchecked")
 	@RequestMapping("foodCart")
 	public String foodCart(int id,HttpServletRequest req){
 		
@@ -97,24 +98,23 @@ public class FoodControcller{
 		
 		return "shopping-cart";
 	}
-/*	@RequestMapping("jiajian")
-	public String jiajian(int id,int value,HttpServletRequest req){
-		Food f2=new Food();
-		for(Food f : foodCart.keySet()){
-			if(id==f.getId()){
-				if("0".equals(value)){
-					foodCart.remove(f);
-				}
-			}
-			break;
-		}
-		HttpSession session = req.getSession();
-		session.setAttribute("foodCart", foodCart);
+	@RequestMapping("changeNum")
+	public String changeNum(Integer id,Integer num,HttpServletRequest req){
 		
+		Food f= new Food(); 
+		f.setId(id);
+		
+		if("0".equals(num)){
+			foodCart.remove(f);
+		}
+
+		if(foodCart.containsKey(f)){
+			foodCart.put(f,num);
+		}
 		
 		return "shopping-cart";
-	}*/
-	
+		
+	}
 	
 	public int getId() {
 		return id;
