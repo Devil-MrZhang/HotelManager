@@ -112,6 +112,7 @@ public class FoodControcller{
 			if (!filePath.getParentFile().exists()) {
 				filePath.getParentFile().mkdirs();
 				System.out.println("创建目录" + filePath);
+				
 			}
 			try {
 				file.transferTo(filePath);
