@@ -118,7 +118,13 @@ public class FoodControcller{
 	@RequestMapping("foodOrder")
 	public String foodOrder(){
 		
-		
+		/*for(Food f:foodCart.keySet()){
+			if(id==f.getId()){
+				foodCart.put(f, id);
+			}
+			break;
+		}
+		*/
 		
 		return "shopping-cart_two";
 	}

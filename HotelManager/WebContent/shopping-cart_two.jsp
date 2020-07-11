@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -83,7 +84,6 @@
             <div class="child on">2.填写订单信息</div>
             <div class="child nor">3.提交订单</div>
         </div>
-        <c:set var="sum" value="0" > </c:set>
         <c:forEach items="${foodCart}" var="foodCart">
         <div class="product">
             <ul>
@@ -101,7 +101,7 @@
                 </li>
             </ul>
         </div> 
-         <c:set var="sum" value="${sum+f.value*f.key.price }"></c:set>
+         <c:set var="sum" value="${sum+foodCart.value*foodCart.key.price }"></c:set>
         </c:forEach>
        
         <div class="recharge">
@@ -142,8 +142,8 @@
             </div>
         </div>
         <div class="jiesuan">
-            <p>合计：<span>￥${sum}</span></p>
-            <a href="shopping-cart_three.html"><button>结算</button></a>
+            <p>合计：<span>${sum }元</span></p>
+            <a href="shopping-cart_three.html"><button>提交订单</button></a>
         </div>
     </div>
 </div>
