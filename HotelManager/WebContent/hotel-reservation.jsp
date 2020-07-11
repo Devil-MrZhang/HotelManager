@@ -12,19 +12,6 @@
     <link rel="stylesheet" type="text/css" href="css/base.css" />
     <link rel="stylesheet" type="text/css" href="css/lq.datetimepick.css"/>
     <link rel="stylesheet" type="text/css" href="css/hotel-reservation.css" />
-    <style type="text/css">
-    	.bg{
-    		margin: 0px auto;
-    	}
-    	.bg tr,td{
-    		padding:2px;
-    		border:1px solid;
-    	}
-    	.btn{
-    		background-color:#D3DCDD;
-    		border-radius:5px;
-    	}
-    </style>
 </head>
 <body style="background:#fafafa url(images/index/h.png) no-repeat 90%  80%;">
 <!-- header -->
@@ -44,13 +31,13 @@
         <ul class="nav">
             <div class="navTop"></div>
             <a href="index.html">
-                <li><span>首页</span><em>首页</em></li>
+                <li><span>HOTEL</span><em>首页</em></li>
             </a>
-            <a href="food">
-                <li class="on"><span>订餐</span><em>订餐</em></li>
+            <a href="goods-online.html">
+                <li><span>GOODS ONLINE</span><em>精品在线</em></li>
             </a>
             <a href="hotel-environment.html">
-                <li><span>酒店环境</span><em>酒店环境</em></li>
+                <li class="on"><span>HOTEL ENVIRONMENT</span><em>酒店环境</em></li>
             </a>
             <a href="index.html">
                 <li class="logo">
@@ -58,10 +45,10 @@
                 </li>
             </a>
             <a href="hotel-culture.html">
-                <li><span>酒店文化</span><em>酒店文化</em></li>
+                <li><span>HOTEL CULTURE</span><em>酒店文化</em></li>
             </a>
             <a href="contact.html">
-                <li><span>联系我们</span><em>联系我们</em></li>
+                <li><span>CONTACT US</span><em>联系我们</em></li>
             </a>
             <div class="login">
                 <a href="login.html" class="login-c">
@@ -78,40 +65,111 @@
 <div class="banner" style="background-image:url(images/environment/banner.jpg);">
 </div>
 <!-- banner over -->
+<div class="reserve">
+    <div class="container">
+        <div class="info">
+            <div class="box">
+                <div class="area">
+                    <input type="text" placeholder="酒店位置"/>
+                    <img src="images/index/area.png" class="icon" alt="" />
+                    <div class="area_cont">
+                        <p>天河区</p>
+                        <p>白云区</p>
+                        <p>越秀区</p>
+                    </div>
+                </div>
+                <div class="child">
+                    <div class="form-group float-left w140">
+                    <input type="text" name="datepicker" id="datetimepicker3" class="form-control" value="" placeholder="入住时间"/>
+                    </div>
+              </div>
+                <div class="child">
+                    <div class="form-group float-left w140">
+                    <input type="text" name="datepicker" id="datetimepicker4" class="form-control" value="" placeholder="退房时间"/>
+                    </div>
+                </div>
+                <dl class="child">
+                    <dt>1人客房<span></span></dt>
 
+                    <div class="person">
+                        <dd>2人客房</dd>
+                        <dd>3人客房</dd>
+                        <dd>4人客房</dd>
+                        <dd>5人客房</dd>
+                        <dd>6人客房</dd>
+                    </div>  
+                </dl>
+                <div class="child btn">搜索</div>
+            </div>
+        </div>
+    </div>
+</div>
 <!-- reservation -->
 <div class="reservation">
     <div class="container">
         <div class="search_parent">
-<h2>订餐</h2></div></div></div>
-       <table class="bg">
-        	<tr>
-        		<td>食品名称</td>
-        		<td>食品类型</td>
-        		<td>食品价格</td>
-        		<td>食品描述</td>
-        		<td>食品图片</td>
-        		<td>&nbsp;</td>
-        	</tr>
-        	<c:forEach items="${food}" var="f">
-        		<tr>
-        			<td>${f.name}</td>
-        			<td>${f.type}</td>
-        			<td>${f.price}</td>
-        			<td>${f.describ}</td>
-        			<td>${f.img_url}</td>
-        			<td>
-						<form action="foodCart" method="post">
-							<input type="hidden" id="id" name="id" value="${f.id}" />
-							<input value="加入购物车" class="btn" type="submit"/>
-						</form>
-					</td>
-        		</tr>
-        	</c:forEach>
-      
-        </table>   
+            <h2>酒店预订</h2>
+           
+        </div>
+        <ul>
+            <a href="goods-online-detail.html">
+                <li>
+                    <div class="imgs">
+                        <img src="images/reservation/1.jpg" alt="" />
+                    </div>
+                    <div class="info">
+                        <div class="name">
+                            <h5>室内空间</h5>
+                            <p>
+                                <span>艺术套间｜</span>
+                                <span>1居｜</span>
+                                <span>宜居4人</span>
+                            </p>
+                        </div>
+                        <div class="money">
+                            ¥<em>348</em>/晚
+                        </div>
+                    </div>
+                </li>
+            </a>
+        </ul>
+    </div>
+</div>
+<!-- reservation over -->
+
 <script src="js/jquery.js"></script>
 <script src="js/base.js"></script>
 <script src="js/reserve.js"></script>
 <script src='js/selectUi.js'></script>
 <script src='js/lq.datetimepick.js'></script>
+<script type="text/javascript">
+$(function (){
+    $(".reservation ul li").each(function(i,n){
+        var dtime=i*0.4;
+        
+        base.anClasAdd($(n),"scaleIn",".6s",dtime+"s","ease-in-out","both");
+    }); 
+    $("#datetimepicker3").on("click",function(e){
+        e.stopPropagation();
+        $(this).lqdatetimepicker({
+            css : 'datetime-day',
+            dateType : 'D',
+            selectback : function(){
+
+            }
+        });
+
+    });    
+    $("#datetimepicker4").on("click",function(e){
+        e.stopPropagation();
+        $(this).lqdatetimepicker({
+            css : 'datetime-day',
+            dateType : 'D',
+            selectback : function(){
+
+            }
+        });
+
+    });
+});
+</script>
