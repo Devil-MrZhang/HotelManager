@@ -63,10 +63,10 @@
                 <li><span>首页</span><em>首页</em></li>
             </a>
             <a href="food">
-                <li><span>订餐</span><em>订餐</em></li>
+                <li class="on"><span>订餐</span><em>订餐</em></li>
             </a>
             <a href="hotel-environment.html">
-                <li class="on"><span>酒店预订</span><em>酒店预订</em></li>
+                <li><span>酒店预订</span><em>酒店预订</em></li>
             </a>
             <a href="index.html">
                 <li class="logo">
@@ -146,7 +146,7 @@
         </table>
             <div class="all">
                 <p>已选 <span class="zongsu1">3</span>商品合计（不含运费）：<em>￥<i>${sum}元</i></em></p>
-                <a href="shopping-cart_two.html"><button>结算</button></a>
+                <a href="foodOrder"><button>结算</button></a>
             </div>
         </div>
     </div>

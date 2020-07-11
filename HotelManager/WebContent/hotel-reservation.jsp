@@ -44,13 +44,13 @@
         <ul class="nav">
             <div class="navTop"></div>
             <a href="index.html">
-                <li><span>HOTEL</span><em>首页</em></li>
+                <li><span>首页</span><em>首页</em></li>
             </a>
             <a href="food">
-                <li><span>订餐</span><em>订餐</em></li>
+                <li class="on"><span>订餐</span><em>订餐</em></li>
             </a>
             <a href="hotel-environment.html">
-                <li class="on"><span>HOTEL ENVIRONMENT</span><em>酒店环境</em></li>
+                <li><span>酒店环境</span><em>酒店环境</em></li>
             </a>
             <a href="index.html">
                 <li class="logo">
@@ -58,10 +58,10 @@
                 </li>
             </a>
             <a href="hotel-culture.html">
-                <li><span>HOTEL CULTURE</span><em>酒店文化</em></li>
+                <li><span>酒店文化</span><em>酒店文化</em></li>
             </a>
             <a href="contact.html">
-                <li><span>CONTACT US</span><em>联系我们</em></li>
+                <li><span>联系我们</span><em>联系我们</em></li>
             </a>
             <div class="login">
                 <a href="login.html" class="login-c">
@@ -83,7 +83,7 @@
 <div class="reservation">
     <div class="container">
         <div class="search_parent">
-<h2>Hotel reservation</h2></div></div></div>
+<h2>订餐</h2></div></div></div>
        <table class="bg">
         	<tr>
         		<td>食品名称</td>
