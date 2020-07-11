@@ -134,7 +134,7 @@ public class FoodControcller{
 	public String food(Model model){
 		List<Food> food=foodService.showList();
 		model.addAttribute("food", food);
-		return "hotel-reservation";
+		return "foodOrder";
 		
 	}
 	
@@ -195,7 +195,6 @@ public class FoodControcller{
 	}
 	@RequestMapping("foodOrder")
 	public String foodOrder(){
-		
 		
 		
 		return "shopping-cart_two";
