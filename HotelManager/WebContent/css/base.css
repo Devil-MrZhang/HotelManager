@@ -368,6 +368,7 @@ body {
 h2 {
   font-size: 60px;
   color: #1e1e1e;
+  padding-top: 10px;
   padding-bottom: 30px;
   font-family: 'acanthusregular';
 }

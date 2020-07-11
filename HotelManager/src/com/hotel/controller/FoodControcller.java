@@ -115,6 +115,13 @@ public class FoodControcller{
 		return "shopping-cart";
 		
 	}
+	@RequestMapping("foodOrder")
+	public String foodOrder(){
+		
+		
+		
+		return "shopping-cart_two";
+	}
 	
 	public int getId() {
 		return id;
