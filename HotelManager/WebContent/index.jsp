@@ -31,13 +31,13 @@
  <ul class="nav">
             <div class="navTop"></div>
             <a href="index.html">
-                <li><span>首页</span><em>首页</em></li>
+                <li class="on"><span>首页</span><em>首页</em></li>
             </a>
             <a href="food">
                 <li><span>订餐</span><em>订餐</em></li>
             </a>
-            <a href="hotel-environment.html">
-                <li class="on"><span>酒店预订</span><em>酒店预订</em></li>
+            <a href="room">
+                <li><span>酒店预订</span><em>酒店预订</em></li>
             </a>
             <a href="index.html">
                 <li class="logo">
@@ -128,7 +128,7 @@
             <div class="infos">
                 <div class="info">
                     <h6>环境</h6>
-                    <h5>汪氏集装箱酒店</h5>
+                    <h5>毕氏集装箱酒店</h5>
                     <p><span>集装箱 </span>建材作为建筑组件，标准程度非常高，运输与吊装十分方便快捷，可灵活组合内部空间，同时也有非常高的回收率。通过货运集装箱材料以模块化的方式按空间设计进行有序组装，然后把定制好的门窗进行二次装嵌，后续环节实施内部空间的模块化施工和软装设置，从设计到建造过程都能从分体现出集装箱建筑的高效、灵活等优异特性</p>
                     <a href="hotel-environment.html" class="more"><img src="images/index/more.png" alt="" /></a>
                 </div>

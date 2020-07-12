@@ -72,6 +72,11 @@ public class RoomServiceImpl implements RoomService {
 		// TODO Auto-generated method stub
 		return roomMapper.selectOrderById(orderid);
 	}
+	@Override
+	public Room selectRoomByType(String type) {
+		// TODO Auto-generated method stub
+		return roomMapper.selectRoomByType(type);
+	}
 
 
 
