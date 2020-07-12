@@ -1,11 +1,13 @@
 
 package com.hotel.controller;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.UUID;
 
 import javax.annotation.Resource;
 import javax.servlet.ServletConfig;
@@ -15,10 +17,13 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import org.apache.catalina.connector.Request;
+import org.apache.ibatis.annotations.Param;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.context.support.ServletContextResource;
+import org.springframework.web.multipart.MultipartFile;
 
 import com.hotel.entity.Food;
 import com.hotel.entity.Room;
@@ -30,11 +35,18 @@ public class FoodControcller{
 	private int id;
 	private List<Food> foodList = new ArrayList<>();
 	private Map<Food,Integer> foodCart= new HashMap<>();
+	private List<Food> list=new ArrayList<Food>();
+	
 	@Resource
 	FoodService foodService;
+	@Autowired
+    private HttpSession session;
+    @Autowired
+    private HttpServletRequest request;
+	
 	@RequestMapping("admin/showfoodList")
 	public String admin_showList(Model model){
-		List<Food> list = foodService.showList();
+		 list = foodService.showList();
 		model.addAttribute("foods", list);
 		System.out.println(list+"+++++++++++++++++++++s");
 		return "admin/foodList";
@@ -51,6 +63,73 @@ public class FoodControcller{
 		System.out.println("删除成功----菜"+idd);
 		return "redirect:showfoodList";
 	}
+	@RequestMapping("admin/foodupup")
+	public String upup(Food food,String i) {
+//		if(i==null) {
+//			i="5";
+//		}
+		System.out.println(i);
+		if(i==null) {
+			for (Food food2 : list) {
+				if(food2.getId()==food.getId()) {
+					System.out.println(food2.getId()+"----"+food.getId());
+					request.setAttribute("foodup", food2);
+					
+				}
+			}
+			
+			return "admin/foodupdate";
+		}
+		else {
+			System.out.println("-----------upup");
+
+		foodService.updatefood(food);
+		
+		return "redirect:/admin/showfoodList";}
+	}
+	@RequestMapping("admin/selectfood")
+	public String sele(Food food) {
+		Food selectFoodById = foodService.selectFoodById(food.getId());
+		List ll=new ArrayList();
+		ll.add(selectFoodById);
+		request.setAttribute("foods", ll);
+		return "admin/foodList";
+
+	}
+	
+	
+	@RequestMapping("admin/foodadd")
+	public String foodadd(Food food,@Param("file")MultipartFile file) {
+	
+			
+			String path = request.getServletContext().getRealPath("upload");
+		System.out.println(path);
+			String fileName = UUID.randomUUID().toString().substring(0, 7);
+			
+			File filePath = new File(path, fileName+".jpg");
+		
+			if (!filePath.getParentFile().exists()) {
+				filePath.getParentFile().mkdirs();
+				System.out.println("创建目录" + filePath);
+				
+				
+			}
+			try {
+				file.transferTo(filePath);
+				food.setImg_url("upload"+"/"+fileName+".jpg");
+			
+				foodService.addfood(food);
+			
+			}catch (Exception e) {
+				e.printStackTrace();
+			}
+		
+		
+		
+		
+		return "redirect:/admin/showfoodList";}
+	
+	
 	
 	@RequestMapping("food")
 	public String food(Model model){

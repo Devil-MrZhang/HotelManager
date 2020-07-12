@@ -50,6 +50,15 @@ public class FoodServiceImpl implements FoodService {
 		
 		return foodMapper.selectFoodById(id);
 	}
+	@Override
+	public List<Food> selectOrderById(Integer orderid) {
+		// TODO Auto-generated method stub
+		return foodMapper.selectOrderById(orderid);
+	}
+	@Override
+	public void addfood(Food food) {
+			foodMapper.add(food);		
+	}
 
 
 
