@@ -30,7 +30,7 @@
         </div>
  <ul class="nav">
             <div class="navTop"></div>
-            <a href="index.html">
+            <a href="index.jsp">
                 <li class="on"><span>首页</span><em>首页</em></li>
             </a>
             <a href="food">
@@ -39,7 +39,7 @@
             <a href="room">
                 <li><span>酒店预订</span><em>酒店预订</em></li>
             </a>
-            <a href="index.html">
+            <a href="index.jsp">
                 <li class="logo">
                     <img src="images/logo.png" alt="" />
                 </li>
@@ -53,7 +53,7 @@
             <div class="login">
                 <a href="login.html" class="login-c">
                 </a>
-                <a href="shopping-cart.html" class="shoppin">
+                <a href="food" class="shoppin">
                 </a>
             </div>
         </ul>

@@ -30,6 +30,12 @@ public class RoomController {
 		model.addAttribute("rooms", list);
 		return "admin/roomList";
 	}
+	
+	/**
+	 * 显示酒店列表
+	 * @param model
+	 * @return
+	 */
 	@RequestMapping("room")
 	public String room(Model model){
 		
@@ -38,7 +44,12 @@ public class RoomController {
 		model.addAttribute("room", room);
 		return "hotel-reservation";
 	}
-
+	/**
+	 * 根据类型显示酒店详情
+	 * @param roomType
+	 * @param model
+	 * @return
+	 */
 	@RequestMapping("roomCart")
 	public String roomCart(String roomType,Model model){
 		Room r = roomService.selectRoomByType(roomType);
@@ -47,6 +58,19 @@ public class RoomController {
 		model.addAttribute("room",r);
 		return "hotel-reservation-detali";
 	}
+	/**
+	 * 进入结算页面
+	 * @return
+	 */
+	@RequestMapping("roomOrder")
+	public String roomOrder(String roomType,Model model){
+		System.out.println(roomType);
+	Room r=	roomService.selectRoomByType(roomType);
+		System.out.println(r);
+		model.addAttribute("room", r);
+		return "hotel-reservation-detali01";
+	}
+	
 	@RequestMapping("admin/delete")
 	public String delete(Integer id){
 		roomService.removeRoom(id);

@@ -7,7 +7,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <title>汪氏--酒店环境</title>
+    <title>毕氏--酒店环境</title>
     <link rel="stylesheet" type="text/css" href="css/rest.css" />
     <link rel="stylesheet" type="text/css" href="css/base.css" />
     <link rel="stylesheet" type="text/css" href="css/contact.css" />
@@ -30,14 +30,14 @@
         </div>
         <ul class="nav">
             <div class="navTop"></div>
-            <a href="index.html">
-                <li><span>HOTEL</span><em>首页</em></li>
+            <a href="index.jsp">
+                <li><span>首页</span><em>首页</em></li>
             </a>
-            <a href="goods-online.html">
-                <li><span>GOODS ONLINE</span><em>精品在线</em></li>
+            <a href="food">
+                <li><span>订餐</span><em>订餐</em></li>
             </a>
-            <a href="hotel-environment.html">
-                <li class="on"><span>HOTEL ENVIRONMENT</span><em>酒店环境</em></li>
+            <a href="room">
+                <li class="on"><span>酒店预订</span><em>酒店预定</em></li>
             </a>
             <a href="index.html">
                 <li class="logo">
@@ -45,15 +45,15 @@
                 </li>
             </a>
             <a href="hotel-culture.html">
-                <li><span>HOTEL CULTURE</span><em>酒店文化</em></li>
+                <li><span>酒店文化</span><em>酒店文化</em></li>
             </a>
             <a href="contact.html">
-                <li><span>CONTACT US</span><em>联系我们</em></li>
+                <li><span>联系我们</span><em>联系我们</em></li>
             </a>
             <div class="login">
-                <a href="login.html" class="login-c">
+                <a href="login.jsp" class="login-c">
                 </a>
-                <a href="shopping-cart.html" class="shoppin">
+                <a href="food" class="shoppin">
                 </a>
             </div>
         </ul>
@@ -78,7 +78,7 @@
             <div class="info">
                 <div class="txt">
                     <h5>High  efficiency</h5>
-                    <h6>汪氏集装箱酒店</h6>
+                    <h6>毕氏集装箱酒店</h6>
                     <p>Tel：400 8888 8888</p>
                     <p>Emain：ieekgie@ekgie.com</p>
                     <p>Tel：400 8888 8888</p>

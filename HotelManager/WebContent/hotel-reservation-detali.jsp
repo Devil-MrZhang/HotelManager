@@ -159,7 +159,11 @@
                     <input type="text" name="datepicker" id="datetimepicker4" class="form-control" value="" placeholder="退房时间"/>
                     </div>
                 </div>
-                <a href="hotel-reservation-detali01.html"><div class="button">立即预定</div></a>
+              
+               <form action="roomOrder" method="post">
+               		<input type="hidden" id="roomType" name="roomType" value="${room.type}" />
+               		<button class="button" type="submit">结算</button>
+               </form>
             </div>
         </div>
     </div>
