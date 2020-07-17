@@ -6,7 +6,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <title>中民--精品在线</title>
+    <title>毕三分酒店</title>
     <link rel="stylesheet" type="text/css" href="css/rest.css" />
     <link rel="stylesheet" type="text/css" href="css/base.css" />
     <link rel="stylesheet" type="text/css" href="css/shopping-cart_three.css" />
@@ -15,7 +15,7 @@
 <!-- header -->
 <div id="header">
     <div class="container">
-        <a href="index.html">
+        <a href="index.jsp">
             <div class="m-logo">
                 <img src="images/logo.png" alt="" />
             </div>
@@ -28,16 +28,16 @@
         </div>
         <ul class="nav">
             <div class="navTop"></div>
-            <a href="index.html">
+            <a href="index.jsp">
                 <li><span>首页</span><em>首页</em></li>
             </a>
-            <a href="goods-online.html">
+            <a href="food">
                 <li><span>订餐</span><em>订餐</em></li>
             </a>
-            <a href="hotel-environment.html">
+            <a href="room">
                 <li class="on"><span>酒店预订</span><em>酒店预订</em></li>
             </a>
-            <a href="index.html">
+            <a href="index.jsp">
                 <li class="logo">
                     <img src="images/logo.png" alt="" />
                 </li>
@@ -51,7 +51,7 @@
             <div class="login">
                 <a href="login.html" class="login-c">
                 </a>
-                <a href="shopping-cart.html" class="shoppin">
+                <a href="food" class="shoppin">
                 </a>
             </div>
         </ul>
@@ -63,7 +63,6 @@
     <div class="container">
         <div class="search_parent">
            <h2>菜品购物车</h2>
-            <div class="search"><input type="text" /><img src="images/search01.png" alt="" /></div>
         </div>
         <div class="shopping-nav">
             <div class="child on">1.我的购物车</div>

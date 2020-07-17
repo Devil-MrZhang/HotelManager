@@ -21,6 +21,8 @@ public interface RoomMapper {
 	public void update(@Param("room")Room room);
 	@Select("select * from t_room where id=#{id}")
 	public Room selectRoomById(Integer id);
+	@Select("select * from t_room where type=#{type}")
+	public Room selectRoomByType(String type);
 	@Delete("delete from t_room where id=#{id}")
 	public void delete(@Param("id")Integer id);
 	@Select("select * from t_room where roomnum=#{roomnum}")

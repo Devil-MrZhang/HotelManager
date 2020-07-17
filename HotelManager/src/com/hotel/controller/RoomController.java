@@ -2,6 +2,7 @@ package com.hotel.controller;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
@@ -19,6 +20,8 @@ import com.hotel.entity.RoomOrder;
 import com.hotel.service.RoomService;
 @Controller
 public class RoomController {
+	private List<Room> room = new ArrayList<>();
+	
 	@Resource
 	RoomService roomService;
 	@RequestMapping("admin/showRoomList")
@@ -27,6 +30,47 @@ public class RoomController {
 		model.addAttribute("rooms", list);
 		return "admin/roomList";
 	}
+	
+	/**
+	 * 显示酒店列表
+	 * @param model
+	 * @return
+	 */
+	@RequestMapping("room")
+	public String room(Model model){
+		
+		room=roomService.showList();
+		
+		model.addAttribute("room", room);
+		return "hotel-reservation";
+	}
+	/**
+	 * 根据类型显示酒店详情
+	 * @param roomType
+	 * @param model
+	 * @return
+	 */
+	@RequestMapping("roomCart")
+	public String roomCart(String roomType,Model model){
+		Room r = roomService.selectRoomByType(roomType);
+		
+		
+		model.addAttribute("room",r);
+		return "hotel-reservation-detali";
+	}
+	/**
+	 * 进入结算页面
+	 * @return
+	 */
+	@RequestMapping("roomOrder")
+	public String roomOrder(String roomType,Model model){
+		System.out.println(roomType);
+	Room r=	roomService.selectRoomByType(roomType);
+		System.out.println(r);
+		model.addAttribute("room", r);
+		return "hotel-reservation-detali01";
+	}
+	
 	@RequestMapping("admin/delete")
 	public String delete(Integer id){
 		roomService.removeRoom(id);
@@ -142,5 +186,19 @@ public class RoomController {
 		
 		return "admin/roomOrderList";
 	}
+	public List<Room> getRoom() {
+		return room;
+	}
+	public void setRoom(List<Room> room) {
+		this.room = room;
+	}
+	public RoomService getRoomService() {
+		return roomService;
+	}
+	public void setRoomService(RoomService roomService) {
+		this.roomService = roomService;
+	}
+	
+	
 	
 }

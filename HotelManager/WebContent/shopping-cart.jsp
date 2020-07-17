@@ -7,7 +7,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <title>中民--精品在线</title>
+    <title>毕氏--酒店</title>
     <link rel="stylesheet" type="text/css" href="css/rest.css" />
     <link rel="stylesheet" type="text/css" href="css/base.css" />
     <link rel="stylesheet" type="text/css" href="css/shopping-cart.css" />
@@ -82,7 +82,7 @@
             <div class="login">
                 <a href="login.html" class="login-c">
                 </a>
-                <a href="shopping-cart.html" class="shoppin">
+                <a href="food" class="shoppin">
                 </a>
             </div>
         </ul>

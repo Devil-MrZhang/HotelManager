@@ -13,7 +13,8 @@ public interface RoomService {
 	void addRoom(Room room);
 
 	void updateRoom(Room room);
-
+	Room selectRoomByType(String type);
+	
 	Room findRoomById(Integer id);
 
 	void removeRoom(Integer id);
