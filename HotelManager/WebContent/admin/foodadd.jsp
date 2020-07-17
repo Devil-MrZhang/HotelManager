@@ -17,7 +17,39 @@
 	src="${pageContext.request.contextPath}/admin/js/public.js"></script>
 <script type="text/javascript" src="${pageContext.request.contextPath}/admin/jquery/jquery-1.11.0.js"></script>
 <script type="text/javascript" src="${pageContext.request.contextPath}/admin/jquery/jquery-migrate-1.2.1.js"></script>
+<script type="text/javascript">
+$(function(){
+    /** 按了回车键 */
+   $(document).keydown(function(event){
+	   if(event.keyCode == 13){
+		   $("btn").trigger("click");
+	   }
+   })
 
+   /** 给登录按钮绑定点击事件  */
+   $("#btn").on("click",function(){
+	   /** 校验登录参数 ctrl+K */
+	   var price = $("#price").val();
+	   
+	   var msg = "";
+	   
+	   if(isNaN(price)){
+		     msg = "价格必须为数字";
+	   }
+	   if(msg !=""){
+		   $.ligerDialog.error(msg);
+		   return;
+	   }
+	   /** 提交表单 */
+	   $("#btn").submit();
+	   
+   })
+   
+})
+
+
+
+</script>
     <title>订单管理</title>
 </head>
 <body>
@@ -117,7 +149,7 @@
                                       
                                        <td><input type="text" name="name" /></td>
                                         <td><input type="text" name="type"  /></td>
-										<td><input type="text" name="price"  /></td>
+										<td><input id="price" type="text" name="price"  /></td>
 										<td><input type="text" name="describ" /></td>
 										<td><input type="file" name="file" /></td>
                                   
@@ -126,7 +158,7 @@
 
                                     <td>
 
-                                        <div class="PublicTableBtnIcon Color3Btn Js_edit">
+                                        <div id="btn" class="PublicTableBtnIcon Color3Btn Js_edit">
                                             <i class="iconfont icon-tubiaozhizuomobanyihuifu-"></i>
                                             <span><button type="submit">编辑</button></span>
                                         </div>
