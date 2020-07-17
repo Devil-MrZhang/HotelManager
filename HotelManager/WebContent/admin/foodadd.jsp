@@ -34,14 +34,14 @@ $(function(){
 	   var msg = "";
 	   
 	   if(isNaN(price)){
-		     msg = "价格必须为数字";
+		   alert(price)
+		     msg = "";
+		   $("#aa").append("价格必须为数字.");
+		  	return false;
+
 	   }
-	   if(msg !=""){
-		   $.ligerDialog.error(msg);
-		   return;
-	   }
+	  
 	   /** 提交表单 */
-	   $("#btn").submit();
 	   
    })
    
@@ -158,9 +158,9 @@ $(function(){
 
                                     <td>
 
-                                        <div id="btn" class="PublicTableBtnIcon Color3Btn Js_edit">
+                                        <div  class="PublicTableBtnIcon Color3Btn Js_edit">
                                             <i class="iconfont icon-tubiaozhizuomobanyihuifu-"></i>
-                                            <span><button type="submit">编辑</button></span>
+                                            <span><button id="btn" >编辑</button></span>
                                         </div>
 
                                         
@@ -176,7 +176,7 @@ $(function(){
                         </table>
 
                     </div>
-            
+            <a id="aa"></a>
 
 
   
