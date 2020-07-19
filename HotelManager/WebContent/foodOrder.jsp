@@ -30,7 +30,7 @@
 <!-- header -->
 <div id="header">
     <div class="container">
-        <a href="index.html">
+        <a href="index.jsp">
             <div class="m-logo">
                 <img src="images/logo.png" alt="" />
             </div>
@@ -43,30 +43,30 @@
         </div>
         <ul class="nav">
             <div class="navTop"></div>
-            <a href="index.html">
+            <a href="index.jsp">
                 <li><span>首页</span><em>首页</em></li>
             </a>
             <a href="food">
                 <li class="on"><span>订餐</span><em>订餐</em></li>
             </a>
-            <a href="hotel-environment.html">
-                <li><span>酒店环境</span><em>酒店环境</em></li>
+            <a href="room">
+                <li><span>酒店预订</span><em>酒店预订</em></li>
             </a>
-            <a href="index.html">
+            <a href="index.jsp">
                 <li class="logo">
                     <img src="images/logo.png" alt="" />
                 </li>
             </a>
-            <a href="hotel-culture.html">
+            <a href="hotel-culture.jsp">
                 <li><span>酒店文化</span><em>酒店文化</em></li>
             </a>
-            <a href="contact.html">
+            <a href="contact.jsp">
                 <li><span>联系我们</span><em>联系我们</em></li>
             </a>
             <div class="login">
-                <a href="login.html" class="login-c">
+                <a href="login.jsp" class="login-c">
                 </a>
-                <a href="shopping-cart.html" class="shoppin">
+                <a href="shopping-cart.jsp" class="shoppin">
                 </a>
             </div>
         </ul>

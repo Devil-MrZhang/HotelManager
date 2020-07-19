@@ -17,7 +17,7 @@
 <!-- header -->
 <div id="header">
     <div class="container">
-        <a href="index.html">
+        <a href="index.jsp">
             <div class="m-logo">
                 <img src="images/logo.png" alt="" />
             </div>
@@ -44,16 +44,16 @@
                     <img src="images/logo.png" alt="" />
                 </li>
             </a>
-            <a href="hotel-culture.html">
+            <a href="hotel-culture.jsp">
                 <li><span>酒店文化</span><em>酒店文化</em></li>
             </a>
-            <a href="contact.html">
+            <a href="contact.jsp">
                 <li><span>联系我们</span><em>联系我们</em></li>
             </a>
             <div class="login">
                 <a href="login.jsp" class="login-c">
                 </a>
-                <a href="shopping-cart.html" class="shoppin">
+                <a href="food" class="shoppin">
                 </a>
             </div>
         </ul>
@@ -174,7 +174,7 @@
     <div class="container">
         <div class="infos">
             <h5>Introduce</h5>
-            <p>汪氏集装箱酒店  构建质朴美感的艺屋，有着简单大方之美。多为选用绿色，泥褐色来铺设，映入眼帘的厚实质感的皮质沙发，组合充斥着大气原始风味的仿旧式家具，再加上精品艺术挂画，让你舒适自然，如临乡间。我们为崇尚自由的旅客营造其自在、随意的不羁生活方式，没有太多造作的修饰与约束，不经意中也成就了另外一种休闲式的浪漫。</p>
+            <p>毕氏集装箱酒店  构建质朴美感的艺屋，有着简单大方之美。多为选用绿色，泥褐色来铺设，映入眼帘的厚实质感的皮质沙发，组合充斥着大气原始风味的仿旧式家具，再加上精品艺术挂画，让你舒适自然，如临乡间。我们为崇尚自由的旅客营造其自在、随意的不羁生活方式，没有太多造作的修饰与约束，不经意中也成就了另外一种休闲式的浪漫。</p>
             <br />
             <br />
             <p>主打的低碳环保建筑理念，内部环境以木质的新中式室内和家具设计为主，宽敞明亮，柔和的色调和原色的木制家具营造出温馨的环境。进口床垫，高等级纯棉精纺用品和布件，确保优质睡眠，为住客提供了一种独特的空间和视觉体验。 </p>
@@ -202,12 +202,12 @@
 <div class="footer">
     <div class="container">
         <div class="top">
-            <a href="index.html" class="f-logo">
+            <a href="index.jsp" class="f-logo">
                 <img src="images/f-logo.png" alt="" />
             </a>
             <dl>
                 <dt>ABOUT</dt>
-                <a href=""><dd>酒店预订</dd></a>
+                <a href="room"><dd>酒店预订</dd></a>
                 <a href=""><dd>Environmental</dd></a>
                 <a href=""><dd>Hotel culture</dd></a>
             </dl>

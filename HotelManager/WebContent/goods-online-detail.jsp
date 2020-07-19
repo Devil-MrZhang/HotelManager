@@ -16,7 +16,7 @@
 <!-- header -->
 <div id="header">
     <div class="container">
-        <a href="index.html">
+        <a href="index.jsp">
             <div class="m-logo">
                 <img src="images/logo.png" alt="" />
             </div>
@@ -29,30 +29,30 @@
         </div>
         <ul class="nav">
             <div class="navTop"></div>
-            <a href="index.html">
-                <li><span>HOTEL</span><em>首页</em></li>
+            <a href="index.jsp">
+                <li><span>首页</span><em>首页</em></li>
             </a>
-            <a href="goods-online.html">
-                <li class="on"><span>GOODS ONLINE</span><em>精品在线</em></li>
+            <a href="food">
+                <li class="on"><span>订餐</span><em>订餐</em></li>
             </a>
-            <a href="hotel-environment.html">
-                <li><span>HOTEL ENVIRONMENT</span><em>酒店环境</em></li>
+            <a href="room">
+                <li><span>酒店预订</span><em>酒店预订</em></li>
             </a>
-            <a href="index.html">
+            <a href="index.jsp">
                 <li class="logo">
                     <img src="images/logo.png" alt="" />
                 </li>
             </a>
-            <a href="hotel-culture.html">
-                <li><span>HOTEL CULTURE</span><em>酒店文化</em></li>
+            <a href="hotel-culture.jsp">
+                <li><span>酒店文化</span><em>酒店文化</em></li>
             </a>
-            <a href="contact.html">
-                <li><span>CONTACT US</span><em>联系我们</em></li>
+            <a href="contact.jsp">
+                <li><span>联系我们</span><em>联系我们</em></li>
             </a>
             <div class="login">
-                <a href="login.html" class="login-c">
+                <a href="login.jsp" class="login-c">
                 </a>
-                <a href="shopping-cart.html" class="shoppin">
+                <a href="food" class="shoppin">
                 </a>
             </div>
         </ul>
@@ -68,7 +68,7 @@
 <div class="reservation">
     <div class="container">
         <div class="search_parent">
-            <a href="goods-online.html"><h2>Goods online</h2></a>
+            <a href="goods-online.jsp"><h2>Goods online</h2></a>
             <div class="search"><input type="text" /><img src="images/search01.png" alt="" /></div>
         </div>
         <div class="head">
@@ -300,9 +300,9 @@
             </a>
             <dl>
                 <dt>ABOUT</dt>
-                <a href="hotel-reservation.html"><dd>酒店预订</dd></a>
-                <a href="hotel-environment.html"><dd>Environmental</dd></a>
-                <a href="hotel-culture.html"><dd>Hotel culture</dd></a>
+                <a href="room"><dd>酒店预订</dd></a>
+                <a href="hotel-environment.jsp"><dd>Environmental</dd></a>
+                <a href="hotel-culture.jsp"><dd>Hotel culture</dd></a>
             </dl>
             <dl>
                 <dt>INTERIOR SPACE</dt>
