@@ -17,7 +17,7 @@
 <!-- header -->
 <div id="header">
     <div class="container">
-        <a href="index.html">
+        <a href="index.jsp">
             <div class="m-logo">
                 <img src="images/logo.png" alt="" />
             </div>
@@ -44,10 +44,10 @@
                     <img src="images/logo.png" alt="" />
                 </li>
             </a>
-            <a href="hotel-culture.html">
+            <a href="hotel-culture.jsp">
                 <li><span>酒店文化</span><em>酒店文化</em></li>
             </a>
-            <a href="contact.html">
+            <a href="contact.jsp">
                 <li><span>联系我们</span><em>联系我们</em></li>
             </a>
             <div class="login">
@@ -161,7 +161,7 @@
 <div class="footer">
     <div class="container">
         <div class="top">
-            <a href="index.html" class="f-logo">
+            <a href="index.jsp" class="f-logo">
                 <img src="images/f-logo.png" alt="" />
             </a>
             <dl>

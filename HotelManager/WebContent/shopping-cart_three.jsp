@@ -42,14 +42,14 @@
                     <img src="images/logo.png" alt="" />
                 </li>
             </a>
-            <a href="hotel-culture.html">
+            <a href="hotel-culture.jsp">
                 <li><span>反馈建议</span><em>反馈建议</em></li>
             </a>
-            <a href="contact.html">
+            <a href="contact.jsp">
                 <li><span>联系我们</span><em>联系我们</em></li>
             </a>
             <div class="login">
-                <a href="login.html" class="login-c">
+                <a href="login.jsp" class="login-c">
                 </a>
                 <a href="food" class="shoppin">
                 </a>
@@ -76,7 +76,7 @@
                 </div>
                 <div class="info">
                     <h5>恭喜你！您的订单已提交成功</h5>
-                    <p>点击<a href="member-center-order.html">查看订单</a></p>
+                    <p>点击<a href="member-center-order.jsp">查看订单</a></p>
                 </div>
             </div>
         </div>

@@ -28,30 +28,30 @@
         </div>
         <ul class="nav">
             <div class="navTop"></div>
-            <a href="index.html">
-                <li><span>HOTEL</span><em>首页</em></li>
+            <a href="index.jsp">
+                <li><span>首页</span><em>首页</em></li>
             </a>
-            <a href="goods-online.html">
-                <li><span>GOODS ONLINE</span><em>精品在线</em></li>
+            <a href="food">
+                <li><span>订餐</span><em>订餐</em></li>
             </a>
-            <a href="hotel-environment.html">
-                <li class="on"><span>HOTEL ENVIRONMENT</span><em>酒店环境</em></li>
+            <a href="room">
+                <li class="on"><span>酒店预订</span><em>酒店预订</em></li>
             </a>
-            <a href="index.html">
+            <a href="index.jsp">
                 <li class="logo">
                     <img src="images/logo.png" alt="" />
                 </li>
             </a>
-            <a href="hotel-culture.html">
-                <li><span>HOTEL CULTURE</span><em>酒店文化</em></li>
+            <a href="hotel-culture.jsp">
+                <li><span>酒店文化</span><em>酒店文化</em></li>
             </a>
-            <a href="contact.html">
-                <li><span>CONTACT US</span><em>联系我们</em></li>
+            <a href="contact.jsp">
+                <li><span>联系我们</span><em>联系我们</em></li>
             </a>
             <div class="login">
-                <a href="login.html" class="login-c">
+                <a href="login.jsp" class="login-c">
                 </a>
-                <a href="shopping-cart.html" class="shoppin">
+                <a href="food" class="shoppin">
                 </a>
             </div>
         </ul>
@@ -76,7 +76,7 @@
             <div class="info">
                 <div class="txt">
                     <h5>High  efficiency</h5>
-                    <h6>汪氏集装箱酒店</h6>
+                    <h6>毕氏集装箱酒店</h6>
                     <p><span>集装箱</span> 作为一种新兴的建造体系，集装箱建筑在建造效率、经济性以及可持续性等方面展现出了巨大的潜力。集装箱建筑在建造效率、经济性以及可持续性方面的优势使得世界各地出现了越来越多的利用集装箱作为建筑组件的尝试，产生了丰富多彩的集装箱。</p>
                     <p class="td">汪氏集装箱酒店运营团队经过开发、设计与建造人员对集装箱建筑进行不断的摸索与开拓创新，在满足建筑对适用、坚固、美观等要求的基础上，完美解决保温、隔热、防火、减震、吸声等特性，同时提升集装箱建筑的建造效率、经济性与可持续性。</p>
                     <p class="td">  我们挑战人们对于传统建筑的外观、建造方式、材料和工作原理的观念，将钢铁的坚硬本质与诗意的柔软灵性完美结合，利用熟悉的工业产品创造出具有独特的功能性美学的建筑。</p>
