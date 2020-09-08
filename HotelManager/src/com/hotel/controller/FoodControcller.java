@@ -101,7 +101,7 @@ public class FoodControcller{
 	@RequestMapping("admin/foodadd")
 	public String foodadd(Food food,@Param("file")MultipartFile file) {
 	
-			
+			System.out.println(food);
 			String path = request.getServletContext().getRealPath("upload");
 		System.out.println(path);
 			String fileName = UUID.randomUUID().toString().substring(0, 7);
@@ -110,14 +110,12 @@ public class FoodControcller{
 		
 			if (!filePath.getParentFile().exists()) {
 				filePath.getParentFile().mkdirs();
-				System.out.println("创建目录" + filePath);
-				
-				
+				System.out.println("创建目录" + filePath);	
 			}
 			try {
 				file.transferTo(filePath);
 				food.setImg_url("upload"+"/"+fileName+".jpg");
-			
+				food.setImg_url(fileName);
 				foodService.addfood(food);
 			
 			}catch (Exception e) {

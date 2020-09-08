@@ -126,7 +126,7 @@ $(document).ready(function(){
                         <div class="PublicBtnIcon Color5Btn">
                             <i class="iconfont  icon-shanchu"></i>
                             <span id="deletes"   >批量删除</span>
-                             <span><a href="${pageContext.request.contextPath }/admin/foodadd.jsp">添加房间</a></span>
+                             <span><a href="${pageContext.request.contextPath }/admin/foodadd.jsp">添加菜</a></span>
                         </div>
 
                     
